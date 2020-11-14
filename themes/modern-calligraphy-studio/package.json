@@ -18,5 +18,9 @@
     "vue-template-compiler": "^2.6.12",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.0-alpha3",
+    "popper.js": "^1.16.1"
   }
 }
