@@ -1,0 +1,120 @@
+.header {
+  background-color: white;
+  z-index: 1024;
+  position: sticky;
+  top: -10.5rem;
+
+  #logo-container {
+    margin: 2rem 0;
+
+    img {
+      width: 250px;
+    }
+  }
+
+  .nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    height: 45px;
+    background-color: white;
+    width: 100%;
+
+    .menu-main-menu-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      max-width: 800px;
+
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+
+      &-item {
+        font-size: 0.75rem;
+        transition: all 250ms ease;
+        position: relative;
+        letter-spacing: 0.15rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          height: 100%;
+          transition: all 250ms ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          &:hover {
+            color: lighten(#000, 60%);
+          }
+        }
+
+        .sub-menu {
+          position: absolute;
+          border: 1px solid black;
+          border-top: none;
+          top: 100%;
+          list-style: none;
+          padding-left: 0;
+          width: 7rem;
+          padding: 0.5rem;
+
+          transition: all 250ms ease;
+          opacity: 0;
+          transform: scaleY(0);
+          transform-origin: top;
+
+          li {
+            transition: all 250ms ease;
+            transition-delay: 200ms;
+            opacity: 0;
+            transform: translateY(-1rem);
+          }
+
+          .menu-item {
+            padding: 0.3rem;
+          }
+        }
+
+        i {
+          margin-left: 0.2rem;
+          transition: all 750ms ease;
+        }
+
+        &:hover {
+          i {
+            transform: rotate(-180deg);
+          }
+          .sub-menu {
+            opacity: 1;
+            transform: scaleY(1);
+
+            li {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fake-content {
+  height: 200vh;
+}
