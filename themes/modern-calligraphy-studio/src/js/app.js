@@ -13,13 +13,13 @@ menuItems.forEach((item) => {
 });
 
 // NAVBAR
-const navbar = document.querySelector("#main-navbar");
+const navbar = document.querySelector("#main-nav");
 
 window.onscroll = () => {
   "use strict";
   if (
-    document.body.scrollTop >= 200 ||
-    document.documentElement.scrollTop >= 200
+    document.body.scrollTop >= 215 ||
+    document.documentElement.scrollTop >= 215
   ) {
     navbar.classList.add("full-width");
   } else {

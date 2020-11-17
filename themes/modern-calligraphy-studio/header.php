@@ -14,8 +14,8 @@
 
 <body <?php body_class(); ?>>
 
-  <div class="main-width container header">
-    <header class="container">
+  <div id="header-container" class="main-width container-fluid">
+    <header id="header" class="container">
       <div id="logo-container" class="row container-fluid justify-content-center">
         <img alt="" src="<?php header_image(); ?>" class="img-fluid">
       </div>
@@ -37,13 +37,13 @@
 
   <div class="main-width fake-content container-fluid">
     <div class="container">
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
-    <p>content</p>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <p>four</p>
+    <p>five</p>
+    <p>six</p>
+    <p>seven</p>
     </div>
     
   </div>
