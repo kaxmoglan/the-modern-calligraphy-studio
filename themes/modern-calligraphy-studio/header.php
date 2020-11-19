@@ -15,13 +15,13 @@
 <body <?php body_class(); ?>>
 
   <div id="header-container" class="main-width container-fluid">
-    <header id="header" class="container">
+    <header id="header" class="container-md">
       <div id="logo-container" class="row container-fluid justify-content-center">
         <img alt="" src="<?php header_image(); ?>" class="img-fluid">
       </div>
 
       <div class="row">
-        <nav id="main-nav" class="nav container-fluid align-items-center justify-content-center">
+        <nav id="desktop-nav" class="main-nav container-fluid align-items-center justify-content-center">
           <?php 
             wp_nav_menu(
               array(
@@ -30,13 +30,31 @@
             ) 
           ?>
         </nav>
+
+        <nav id="mobile-nav" class="main-nav container-fluid align-items-center justify-content-center">
+          <div id="mobile-menu-btn">
+            <div class="hamburger-container">
+              <div id="hamburger" class="hamburger"></div>
+            </div>
+            <p id="mobile-menu-btn__text">MENU</p>
+          </div>
+          <div id="mobile-menu-container">
+            <?php 
+              wp_nav_menu(
+                array(
+                  'theme_location' => "main-menu",
+                )
+              ) 
+            ?>
+          </div>
+        </nav>
       </div>
     </header>
   </div>
   
 
   <div class="main-width fake-content container-fluid">
-    <div class="container">
+    <div class="container-md">
     <p>one</p>
     <p>two</p>
     <p>three</p>

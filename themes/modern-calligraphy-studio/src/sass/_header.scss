@@ -2,6 +2,11 @@
   background-color: white;
   top: -10.5rem;
 
+  @include media-breakpoint-down(md) {
+    position: sticky;
+    top: -11rem;
+  }
+
   #logo-container {
     margin: 2rem 0;
 
@@ -10,12 +15,15 @@
     }
   }
 
-  .nav {
+  #desktop-nav {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     height: 45px;
     background-color: white;
-    width: 100%;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
 
     &.full-width {
       position: fixed;
@@ -45,8 +53,13 @@
       align-items: center;
       justify-content: space-around;
 
+      &-item-has-children > a {
+        cursor: pointer;
+      }
+
       &-item {
         font-size: 0.75rem;
+        text-transform: uppercase;
         transition: all 250ms ease;
         position: relative;
         letter-spacing: 0.15rem;
@@ -118,6 +131,173 @@
               transform: translateY(0);
             }
           }
+        }
+      }
+    }
+  }
+
+  #mobile-nav {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: white;
+    overflow: hidden;
+    transition: all 1000ms ease;
+    max-height: 45px;
+
+    &.open {
+      max-height: 1000px;
+    }
+
+    #mobile-menu-btn {
+      height: 45px;
+      letter-spacing: 0.15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &__text {
+        margin: 0;
+        padding: 0;
+      }
+
+      .hamburger-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        margin-right: 1rem;
+
+        #hamburger {
+          width: 20px;
+          height: 2px;
+          background-color: black;
+          transition: all 500ms ease-in-out;
+
+          &::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            transition: all 500ms ease;
+          }
+          &::after {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background-color: black;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            transition: all 500ms ease;
+          }
+
+          &.open {
+            width: 0;
+
+            &::before {
+              transform: rotate(45deg);
+              top: 9px;
+            }
+
+            &::after {
+              transform: rotate(-45deg);
+              bottom: 9px;
+            }
+          }
+        }
+      }
+    }
+
+    #mobile-menu-container {
+      margin-top: 0.5rem;
+
+      .menu {
+        transition: all 500ms ease;
+        transform: translateY(-1rem);
+        pointer-events: none;
+        opacity: 0;
+        list-style-type: none;
+        padding-left: 0;
+
+        &-item-has-children > a {
+          cursor: pointer;
+        }
+
+        &-item {
+          font-size: 0.75rem;
+          text-transform: uppercase;
+          transition: all 250ms ease;
+          letter-spacing: 0.15rem;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0.5rem;
+
+          i {
+            margin-left: 0.2rem;
+            transition: all 500ms ease-out;
+          }
+
+          a {
+            color: inherit;
+            text-decoration: none;
+            height: 100%;
+            transition: all 250ms ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .sub-menu {
+            padding-left: 1rem;
+            margin: 0 0 0 5rem;
+            border-left: 1px solid black;
+            max-height: 0;
+            transition: all 250ms ease;
+
+            li {
+              transition: all 250ms ease;
+              transform: translateY(-1rem);
+              opacity: 0;
+            }
+          }
+
+          &.open {
+            .sub-menu {
+              margin: 1rem 0 1rem 5rem;
+              max-height: 500px;
+
+              li {
+                transform: translateY(0);
+                opacity: 1;
+              }
+            }
+            i {
+              transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+
+      &.open {
+        .menu {
+          transform: translateY(0);
+          pointer-events: initial;
+          opacity: 1;
         }
       }
     }
