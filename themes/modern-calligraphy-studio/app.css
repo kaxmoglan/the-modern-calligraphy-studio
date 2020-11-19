@@ -11433,7 +11433,7 @@ fieldset:disabled .btn {
 }
 
 #header-container {
-  background-color: white;
+  background-color: #fff;
   top: -10.5rem;
 }
 
@@ -11453,10 +11453,10 @@ fieldset:disabled .btn {
 }
 
 #header-container #desktop-nav {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
   height: 45px;
-  background-color: white;
+  background-color: #fff;
 }
 
 @media (max-width: 767.98px) {
@@ -11520,12 +11520,12 @@ fieldset:disabled .btn {
 }
 
 #header-container #desktop-nav .menu-item-has-children > a:hover {
-  color: black;
+  color: #000;
 }
 
 #header-container #desktop-nav .menu-item .sub-menu {
   position: absolute;
-  border: 1px solid black;
+  border: 1px solid #000;
   border-top: none;
   top: 100%;
   list-style: none;
@@ -11579,9 +11579,9 @@ fieldset:disabled .btn {
 }
 
 #header-container #mobile-nav {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  background-color: white;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
   overflow: hidden;
   transition: all 1000ms ease;
   max-height: 45px;
@@ -11624,32 +11624,29 @@ fieldset:disabled .btn {
 #header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger {
   width: 20px;
   height: 2px;
-  background-color: black;
+  background-color: #000;
   transition: all 500ms ease-in-out;
 }
 
-#header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger::before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: black;
-  position: absolute;
-  top: 3px;
-  left: 0;
-  transition: all 500ms ease;
-}
-
+#header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger::before,
 #header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger::after {
   content: "";
   display: block;
   width: 20px;
   height: 2px;
-  background-color: black;
+  background-color: #000;
   position: absolute;
+  transition: all 500ms ease;
+}
+
+#header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger::before {
+  top: 3px;
+  left: 0;
+}
+
+#header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger::after {
   bottom: 3px;
   left: 0;
-  transition: all 500ms ease;
 }
 
 #header-container #mobile-nav #mobile-menu-btn .hamburger-container #hamburger.open {
@@ -11725,16 +11722,15 @@ fieldset:disabled .btn {
   width: 50%;
   position: relative;
   left: 25%;
-  border-left: 1px solid black;
+  border-left: 1px solid #000;
   max-height: 0;
   transition: all 250ms ease;
   pointer-events: none;
-  align-self: center;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item .sub-menu li {
   transition: all 500ms ease;
-  transition-delay: 250ms;
+  transition-delay: 0ms;
   transform: translateY(-1rem);
   opacity: 0;
   align-items: flex-start;
@@ -11747,6 +11743,7 @@ fieldset:disabled .btn {
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item.open .sub-menu li {
+  transition-delay: 250ms;
   transform: translateY(0);
   opacity: 1;
 }
