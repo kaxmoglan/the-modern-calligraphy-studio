@@ -1,8 +1,15 @@
 require("bootstrap");
 
-// ADD ARROW TO PARENT MENUS
 const parentMenus = document.querySelectorAll(".menu-item-has-children");
+const navbar = document.querySelector("#desktop-nav");
+const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
+const mobileMenu = document.querySelector("#mobile-nav");
+const mobileMenuContainer = document.querySelector("#mobile-menu-container");
+const hamburger = document.querySelector("#hamburger");
 
+let mobileMenuOpen = false;
+
+// SUB MENU ARROWS & FUNCTIONALITY ON MOBILE
 parentMenus.forEach((menu) => {
   const link = menu.getElementsByTagName("a")[0];
   const arrow = document.createElement("i");
@@ -27,31 +34,7 @@ parentMenus.forEach((menu) => {
   });
 });
 
-// MOBILE SUB-MENU OPEN
-// parentMenus.forEach((menu) => {
-//   const link = menu.getElementsByTagName("a")[0];
-//   let open = false;
-
-//   link.addEventListener("click", () => {
-//     parentMenus.forEach((m) => {
-//       if (m.classList.contains("open") && m !== menu) {
-//         m.classList.remove("open");
-//       }
-//     });
-
-//     if (!open) {
-//       menu.classList.add("open");
-//       open = true;
-//     } else {
-//       menu.classList.remove("open");
-//       open = false;
-//     }
-//   });
-// });
-
 // DESKTOP NAVBAR FULL WIDTH ON SCROLL
-const navbar = document.querySelector("#desktop-nav");
-
 window.onscroll = () => {
   "use strict";
   if (
@@ -64,25 +47,27 @@ window.onscroll = () => {
   }
 };
 
-// MOBILE MENU
-
-const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
-const mobileMenu = document.querySelector("#mobile-nav");
-const mobileMenuContainer = document.querySelector("#mobile-menu-container");
-const hamburger = document.querySelector("#hamburger");
-
-let mobileMenuOpen = false;
-
+// SHOW/HIDE MOBILE MENU
 mobileMenuBtn.addEventListener("click", () => {
   if (mobileMenuOpen) {
+    // close menu
     mobileMenu.classList.remove("open");
     mobileMenuContainer.classList.remove("open");
     hamburger.classList.remove("open");
     mobileMenuOpen = false;
+
+    setTimeout(() => {
+      parentMenus.forEach((menu) => menu.classList.remove("open"));
+      mobileMenuContainer.classList.remove("display");
+    }, 1000);
   } else {
+    // open menu
     mobileMenu.classList.add("open");
-    mobileMenuContainer.classList.add("open");
+    mobileMenuContainer.classList.add("display");
     hamburger.classList.add("open");
+    setTimeout(() => {
+      mobileMenuContainer.classList.add("open");
+    }, 250);
     mobileMenuOpen = true;
   }
 });

@@ -11493,10 +11493,6 @@ fieldset:disabled .btn {
   justify-content: space-around;
 }
 
-#header-container #desktop-nav .menu-item-has-children > a {
-  cursor: pointer;
-}
-
 #header-container #desktop-nav .menu-item {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -11521,6 +11517,10 @@ fieldset:disabled .btn {
 
 #header-container #desktop-nav .menu-item a:hover {
   color: #999999;
+}
+
+#header-container #desktop-nav .menu-item-has-children > a:hover {
+  color: black;
 }
 
 #header-container #desktop-nav .menu-item .sub-menu {
@@ -11558,16 +11558,22 @@ fieldset:disabled .btn {
   transition: all 750ms ease;
 }
 
-#header-container #desktop-nav .menu-item:hover i {
+#header-container #desktop-nav .menu-item:hover i,
+#header-container #desktop-nav .menu-item:focus i,
+#header-container #desktop-nav .menu-item:active i {
   transform: rotate(-180deg);
 }
 
-#header-container #desktop-nav .menu-item:hover .sub-menu {
+#header-container #desktop-nav .menu-item:hover .sub-menu,
+#header-container #desktop-nav .menu-item:focus .sub-menu,
+#header-container #desktop-nav .menu-item:active .sub-menu {
   opacity: 1;
   transform: scaleY(1);
 }
 
-#header-container #desktop-nav .menu-item:hover .sub-menu li {
+#header-container #desktop-nav .menu-item:hover .sub-menu li,
+#header-container #desktop-nav .menu-item:focus .sub-menu li,
+#header-container #desktop-nav .menu-item:active .sub-menu li {
   opacity: 1;
   transform: translateY(0);
 }
@@ -11662,6 +11668,11 @@ fieldset:disabled .btn {
 
 #header-container #mobile-nav #mobile-menu-container {
   margin-top: 0.5rem;
+  display: none;
+}
+
+#header-container #mobile-nav #mobile-menu-container.display {
+  display: initial;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu {
@@ -11675,6 +11686,8 @@ fieldset:disabled .btn {
 
 #header-container #mobile-nav #mobile-menu-container .menu-item-has-children > a {
   cursor: pointer;
+  position: relative;
+  left: 8px;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item {
@@ -11688,6 +11701,7 @@ fieldset:disabled .btn {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  position: relative;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item i {
@@ -11707,21 +11721,29 @@ fieldset:disabled .btn {
 
 #header-container #mobile-nav #mobile-menu-container .menu-item .sub-menu {
   padding-left: 1rem;
-  margin: 0 0 0 5rem;
+  margin: 0;
+  width: 50%;
+  position: relative;
+  left: 25%;
   border-left: 1px solid black;
   max-height: 0;
   transition: all 250ms ease;
+  pointer-events: none;
+  align-self: center;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item .sub-menu li {
-  transition: all 250ms ease;
+  transition: all 500ms ease;
+  transition-delay: 250ms;
   transform: translateY(-1rem);
   opacity: 0;
+  align-items: flex-start;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item.open .sub-menu {
-  margin: 1rem 0 1rem 5rem;
+  margin: 1rem 0;
   max-height: 500px;
+  pointer-events: initial;
 }
 
 #header-container #mobile-nav #mobile-menu-container .menu-item.open .sub-menu li {
