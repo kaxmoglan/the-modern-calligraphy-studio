@@ -2,7 +2,12 @@
 
 @import "header";
 @import "colors";
+@import "home_page";
 
 body {
   font-family: "Lato", sans-serif;
+}
+
+.fake-content {
+  height: 200vh;
 }

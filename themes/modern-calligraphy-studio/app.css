@@ -11434,13 +11434,14 @@ fieldset:disabled .btn {
 
 #header-container {
   background-color: #fff;
-  top: -10.5rem;
+  position: relative;
+  z-index: 1000;
 }
 
 @media (max-width: 767.98px) {
   #header-container {
     position: sticky;
-    top: -11rem;
+    top: -11.5rem;
   }
 }
 
@@ -11455,6 +11456,7 @@ fieldset:disabled .btn {
 #header-container #desktop-nav {
   height: 45px;
   background-color: #fff;
+  padding: 0;
 }
 
 @media (max-width: 767.98px) {
@@ -11468,7 +11470,6 @@ fieldset:disabled .btn {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 0;
 }
 
 #header-container #desktop-nav .menu-main-menu-container {
@@ -11527,12 +11528,12 @@ fieldset:disabled .btn {
 #header-container #desktop-nav .menu-item .sub-menu {
   position: absolute;
   border: 1px solid #000;
-  border-top: none;
   top: 100%;
   list-style: none;
   padding-left: 0;
   min-width: 7rem;
   padding: 0.5rem;
+  background-color: #fff;
   transition: all 250ms ease;
   opacity: 0;
   transform: scaleY(0);
@@ -11759,11 +11760,19 @@ fieldset:disabled .btn {
   opacity: 1;
 }
 
-.fake-content {
-  height: 200vh;
+.wp-block-cover__inner-container {
+  display: flex;
+  max-width: 500px;
+  padding: 3rem 1rem;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 body {
   font-family: "Lato", sans-serif;
+}
+
+.fake-content {
+  height: 200vh;
 }
 
