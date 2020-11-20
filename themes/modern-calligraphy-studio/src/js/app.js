@@ -9,14 +9,20 @@ const hamburger = document.querySelector("#hamburger");
 
 let mobileMenuOpen = false;
 
-// SUB MENU ARROWS & FUNCTIONALITY ON MOBILE
+// SUB MENUS
 parentMenus.forEach((menu) => {
   const link = menu.getElementsByTagName("a")[0];
+
+  // remove page link for parent-menu functionality
+  link.removeAttribute("href");
+
+  // add arrow
   const arrow = document.createElement("i");
   arrow.classList.add("fas");
   arrow.classList.add("fa-chevron-down");
   link.appendChild(arrow);
 
+  // sub-menu functionality on mobile
   link.addEventListener("click", () => {
     parentMenus.forEach((m) => {
       if (m.classList.contains("open") && m !== menu) {
