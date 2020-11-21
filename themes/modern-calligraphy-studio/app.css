@@ -11937,6 +11937,52 @@ fieldset:disabled .btn {
   border: 1px solid #000;
 }
 
+.stocked-in {
+  margin-top: 7rem;
+  padding: 0;
+}
+
+.stocked-in h3,
+.stocked-in .h3 {
+  font-size: 1.35rem;
+  letter-spacing: 0.2rem;
+}
+
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container .etsy-logo img {
+  width: 130px;
+}
+
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container .etsy-logo,
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container .long-barn-logo {
+  opacity: 0.6;
+}
+
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-image {
+  margin: 1rem;
+  flex: 0 0 200px;
+  cursor: pointer;
+  transition: all 500ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-image:hover {
+  transform: scale(1.1);
+}
+
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-image img {
+  width: 100%;
+  height: auto;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
