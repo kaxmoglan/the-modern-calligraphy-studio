@@ -11914,11 +11914,13 @@ fieldset:disabled .btn {
 .about__content p {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
+  padding: 0 2rem;
 }
 
 .about__content .wp-block-image {
   width: 125px;
-  margin: auto 0 0 0;
+  margin: 0;
+  margin-top: auto;
 }
 
 .about__content .wp-block-image img {
