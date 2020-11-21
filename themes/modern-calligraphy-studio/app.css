@@ -682,7 +682,7 @@ progress {
   .container-md,
   .container-sm,
   .container {
-    max-width: 1320px;
+    max-width: 1140px;
   }
 }
 
@@ -11815,7 +11815,7 @@ fieldset:disabled .btn {
 }
 
 .featured-shop-sections .wp-block-column:hover .wp-block-image img {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .featured-shop-sections .wp-block-column .wp-block-image {
@@ -11890,7 +11890,6 @@ fieldset:disabled .btn {
   min-height: 400px;
   margin: 0;
   margin-left: 0;
-  padding: 2.5rem;
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
@@ -11908,7 +11907,7 @@ fieldset:disabled .btn {
   font-size: 2.2rem;
   letter-spacing: 0.2rem;
   margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .about__content p {
@@ -11955,6 +11954,12 @@ fieldset:disabled .btn {
   justify-content: space-evenly;
 }
 
+.stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container .etsy-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container .etsy-logo img {
   width: 130px;
 }
@@ -11966,12 +11971,9 @@ fieldset:disabled .btn {
 
 .stocked-in .wp-block-group__inner-container .logos-container .wp-block-image {
   margin: 1rem;
-  flex: 0 0 200px;
+  flex: 0 0 210px;
   cursor: pointer;
   transition: all 500ms ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .stocked-in .wp-block-group__inner-container .logos-container .wp-block-image:hover {
@@ -11981,6 +11983,116 @@ fieldset:disabled .btn {
 .stocked-in .wp-block-group__inner-container .logos-container .wp-block-image img {
   width: 100%;
   height: auto;
+}
+
+.news-testimonials {
+  margin-top: 7rem;
+}
+
+.news-testimonials .wp-block-group__inner-container {
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.news-testimonials .wp-block-group__inner-container .banner {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .news-testimonials .wp-block-group__inner-container .banner {
+    display: none;
+  }
+}
+
+.news-testimonials .wp-block-group__inner-container .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-testimonials .wp-block-group__inner-container .content {
+  margin: 2rem 0 3rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 991.98px) {
+  .news-testimonials .wp-block-group__inner-container .content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.news-testimonials .wp-block-group__inner-container .content .latest-news {
+  background-color: #f9f9f9;
+  padding-top: 4rem;
+  min-height: 500px;
+  position: relative;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .latest-news h3,
+.news-testimonials .wp-block-group__inner-container .content .latest-news .h3 {
+  margin: 2rem 0;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .latest-news p {
+  padding: 0 4rem;
+  margin-top: 10%;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .latest-news::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 93%;
+  height: 93%;
+  top: 3.5%;
+  left: 3.5%;
+  border: 1px solid #000;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .testimonials {
+  background-color: #505050;
+  color: #fff;
+  padding-top: 4rem;
+  min-height: 500px;
+  position: relative;
+  margin-left: 0;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .testimonials h3,
+.news-testimonials .wp-block-group__inner-container .content .testimonials .h3 {
+  margin: 2.5rem 0 2rem 0;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .testimonials .testimonial {
+  margin-bottom: 1rem;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .testimonials .testimonial .wp-block-group__inner-container {
+  flex-direction: column;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .testimonials .testimonial .wp-block-group__inner-container p {
+  margin: 0;
+}
+
+.news-testimonials .wp-block-group__inner-container .content .testimonials::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 93%;
+  height: 93%;
+  top: 3.5%;
+  left: 3.5%;
+  border: 1px solid #fff;
 }
 
 body {

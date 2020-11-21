@@ -51,7 +51,7 @@
 
     &:hover {
       .wp-block-image img {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
     }
     .wp-block-image {
@@ -123,7 +123,6 @@
     min-height: 400px;
     margin: 0;
     margin-left: 0;
-    padding: 2.5rem;
     background-color: $light_grey;
     display: flex;
     flex-direction: column;
@@ -139,7 +138,7 @@
       font-size: 2.2rem;
       letter-spacing: 0.2rem;
       margin-bottom: 2rem;
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
     p {
@@ -188,8 +187,14 @@
           align-items: center;
           justify-content: space-evenly;
 
-          .etsy-logo img {
-            width: 130px;
+          .etsy-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+              width: 130px;
+            }
           }
 
           .etsy-logo,
@@ -199,13 +204,9 @@
         }
         &-image {
           margin: 1rem;
-          flex: 0 0 200px;
+          flex: 0 0 210px;
           cursor: pointer;
           transition: all 500ms ease;
-
-          display: flex;
-          align-items: center;
-          justify-content: center;
 
           &:hover {
             transform: scale(1.1);
@@ -215,6 +216,106 @@
             width: 100%;
             height: auto;
           }
+        }
+      }
+    }
+  }
+}
+
+.news-testimonials {
+  margin-top: 7rem;
+
+  .wp-block-group__inner-container {
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .banner {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .content {
+      margin: 2rem 0 3rem 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+
+      @include media-breakpoint-down(lg) {
+        grid-template-columns: 1fr;
+      }
+
+      .latest-news {
+        background-color: $light_grey;
+        padding-top: 4rem;
+        min-height: 500px;
+        position: relative;
+
+        h3 {
+          margin: 2rem 0;
+        }
+
+        p {
+          padding: 0 4rem;
+          margin-top: 10%;
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 93%;
+          height: 93%;
+          top: 3.5%;
+          left: 3.5%;
+          border: 1px solid $black;
+        }
+      }
+
+      .testimonials {
+        background-color: $dark_grey;
+        color: $white;
+        padding-top: 4rem;
+        min-height: 500px;
+        position: relative;
+        margin-left: 0;
+
+        h3 {
+          margin: 2.5rem 0 2rem 0;
+        }
+
+        .testimonial {
+          margin-bottom: 1rem;
+          .wp-block-group__inner-container {
+            flex-direction: column;
+            p {
+              margin: 0;
+            }
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 93%;
+          height: 93%;
+          top: 3.5%;
+          left: 3.5%;
+          border: 1px solid $white;
         }
       }
     }
