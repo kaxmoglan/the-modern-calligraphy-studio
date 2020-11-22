@@ -35,7 +35,6 @@
 
   @include media-breakpoint-down(md) {
     grid-template-columns: repeat(2, 1fr);
-    padding: 0 1rem;
     gap: 1rem;
   }
 
@@ -181,30 +180,25 @@
           flex-flow: row wrap;
           align-items: center;
           justify-content: space-evenly;
-
-          .etsy-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-              width: 130px;
-            }
-          }
-
-          .etsy-logo,
-          .long-barn-logo {
-            opacity: 0.6;
-          }
         }
+
         &-image {
           margin: 1rem;
           flex: 0 0 210px;
           cursor: pointer;
           transition: all 500ms ease;
+          opacity: 0.65;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          figure {
+            margin: 0;
+          }
 
           &:hover {
             transform: scale(1.1);
+            opacity: 1;
           }
 
           img {
@@ -312,6 +306,202 @@
           top: 3.5%;
           left: 3.5%;
           border: 1px solid $white;
+        }
+      }
+    }
+  }
+}
+
+.featured-in {
+  margin-top: 7rem;
+  padding: 0;
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  .wp-block-group__inner-container {
+    .images-container {
+      .wp-block {
+        &-group__inner-container {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &-image {
+          margin: 1rem;
+          flex: 0 0 210px;
+          cursor: pointer;
+          transition: all 500ms ease;
+          // opacity: 0.65;
+
+          figure {
+            margin: 0;
+          }
+
+          // &:hover {
+          //   transform: scale(1.1);
+          //   opacity: 1;
+          // }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sign-up-section {
+  padding: 0;
+  margin: 7rem auto 0 auto;
+  background-color: $light_grey;
+
+  p,
+  h3 {
+    text-align: center;
+  }
+
+  .wp-block-group__inner-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 3rem;
+
+    .sign-up-form {
+      margin: 2rem 0 1rem 0;
+
+      @include media-breakpoint-down(lg) {
+        text-align: center;
+      }
+
+      &__name,
+      &__email {
+        margin-right: 2rem;
+        display: inline;
+
+        @include media-breakpoint-down(md) {
+          display: block;
+          margin-bottom: 1rem;
+        }
+        @include media-breakpoint-down(sm) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          margin-right: 0;
+        }
+      }
+
+      &__btn {
+        font-size: 0.8rem;
+        display: inline;
+        position: relative;
+        bottom: 3px;
+
+        @include media-breakpoint-down(lg) {
+          bottom: initial;
+          top: 1rem;
+        }
+      }
+
+      label {
+        letter-spacing: 0.1rem;
+      }
+
+      &__border {
+        &-top,
+        &-right,
+        &-bottom,
+        &-left {
+          position: absolute;
+          border: none;
+          background-color: $black;
+        }
+        &-bottom,
+        &-top {
+          width: 85%;
+          height: 0.5px;
+
+          @include media-breakpoint-down(lg) {
+            width: 78%;
+          }
+          @include media-breakpoint-down(md) {
+            width: 71%;
+          }
+          @include media-breakpoint-down(sm) {
+            width: 67%;
+          }
+        }
+        &-right,
+        &-left {
+          width: 0.5px;
+          height: 52.5%;
+          @include media-breakpoint-down(lg) {
+            height: 55%;
+          }
+          @include media-breakpoint-down(md) {
+            height: 65%;
+          }
+          @include media-breakpoint-down(sm) {
+            height: 75%;
+          }
+        }
+
+        &-bottom,
+        &-right {
+          bottom: 1.5rem;
+          right: 1.75rem;
+        }
+        &-top,
+        &-left {
+          top: 1.5rem;
+          left: 1.75rem;
+        }
+      }
+    }
+
+    .wp-block-image {
+      position: absolute;
+
+      &:nth-of-type(1) {
+        top: 0;
+        right: -3rem;
+        transform: rotate(30deg) scale(0.5);
+      }
+      &:nth-of-type(2) {
+        bottom: -1rem;
+        left: -3rem;
+        transform: rotate(30deg) scale(0.5) scaleY(-1);
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      .wp-block-image {
+        &:nth-of-type(1) {
+          transform: rotate(30deg) scale(0.4);
+        }
+        &:nth-of-type(2) {
+          transform: rotate(30deg) scale(0.4) scaleY(-1);
+        }
+      }
+    }
+    @include media-breakpoint-down(sm) {
+      .wp-block-image {
+        &:nth-of-type(1) {
+          transform: rotate(30deg) scale(0.35);
+          top: -1rem;
+          right: -4rem;
+        }
+        &:nth-of-type(2) {
+          transform: rotate(30deg) scale(0.35) scaleY(-1);
+          bottom: -2rem;
+          left: -4rem;
         }
       }
     }
