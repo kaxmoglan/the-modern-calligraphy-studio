@@ -18,8 +18,7 @@
       transition: all 500ms ease;
 
       &:hover {
-        background-color: $white;
-        color: $black;
+        background-color: lighten($black, 30%);
       }
     }
   }
@@ -405,6 +404,12 @@
         position: relative;
         bottom: 3px;
 
+        button {
+          &:hover {
+            background-color: lighten($black, 20%);
+          }
+        }
+
         @include media-breakpoint-down(lg) {
           bottom: initial;
           top: 1rem;
@@ -505,5 +510,19 @@
         }
       }
     }
+  }
+}
+
+.instagram-section {
+  padding: 0;
+  margin-top: 7rem;
+
+  h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
+
+  .sbi_follow_btn {
+    margin-top: 1rem;
   }
 }

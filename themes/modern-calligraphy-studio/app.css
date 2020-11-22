@@ -11782,8 +11782,7 @@ fieldset:disabled .btn {
 }
 
 .top-banner .wp-block-cover__inner-container button:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #4d4d4d;
 }
 
 .featured-shop-sections {
@@ -12180,6 +12179,10 @@ fieldset:disabled .btn {
   bottom: 3px;
 }
 
+.sign-up-section .wp-block-group__inner-container .sign-up-form__btn button:hover {
+  background-color: #333333;
+}
+
 @media (max-width: 991.98px) {
   .sign-up-section .wp-block-group__inner-container .sign-up-form__btn {
     bottom: initial;
@@ -12304,6 +12307,21 @@ fieldset:disabled .btn {
     bottom: -2rem;
     left: -4rem;
   }
+}
+
+.instagram-section {
+  padding: 0;
+  margin-top: 7rem;
+}
+
+.instagram-section h3,
+.instagram-section .h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.instagram-section .sbi_follow_btn {
+  margin-top: 1rem;
 }
 
 body {
