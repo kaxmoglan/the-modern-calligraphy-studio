@@ -24,6 +24,7 @@
   // THEME SUPPORT
   add_theme_support( 'custom-header' );
   add_theme_support('menus');
+  add_theme_support('widgets');
 
   // REGISTER MENUS
   register_nav_menus(
@@ -31,3 +32,15 @@
       'main-menu' => 'Main Menu',
     )
   );
+
+  // REGISTER SIDEBARS
+  function my_widgets() {
+    register_sidebar(
+      array(
+        'name' => 'Footer',
+        'id' => 'footer'
+      )
+    );
+  }
+
+  add_action('widgets_init', 'my_widgets');

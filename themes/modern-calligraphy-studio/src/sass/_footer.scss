@@ -1,0 +1,129 @@
+footer {
+  background-color: $light_grey;
+  text-align: center;
+  padding: 2rem 0 8rem 0;
+  position: relative;
+
+  li {
+    list-style: none;
+  }
+
+  h4 {
+    margin-bottom: 2rem;
+    font-size: 1.35rem;
+  }
+
+  @include media-breakpoint-down(md) {
+    .links,
+    .contact {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .links {
+    &__content {
+      a {
+        color: $black;
+        text-decoration: none;
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        margin-bottom: 0.5rem;
+        transition: all 250ms ease;
+
+        &:hover {
+          color: lighten($black, 60%);
+        }
+      }
+    }
+  }
+
+  .contact {
+    hr {
+      width: 60%;
+      margin: 1rem auto;
+    }
+
+    &__social {
+      a {
+        padding: 0 0.5rem;
+        color: $black;
+        transition: all 250ms ease;
+
+        &:hover {
+          color: lighten($black, 60%);
+          transform: scale(1.1);
+        }
+      }
+      .fa-instagram {
+        transform: scale(1.15);
+      }
+    }
+
+    &__email {
+      a {
+        color: $black;
+        text-decoration: none;
+        transition: all 250ms ease;
+
+        p {
+          margin: 0;
+          margin-left: 0.5rem;
+        }
+
+        i {
+          transition: all 250ms ease;
+        }
+
+        &:hover {
+          color: lighten($black, 60%);
+        }
+      }
+    }
+  }
+
+  .subscribe {
+    form {
+      input {
+        max-width: 200px;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+      }
+
+      button {
+        margin-top: 0.5rem;
+        letter-spacing: 0.1rem;
+        font-size: 0.9rem;
+        transition: all 250ms ease;
+
+        &:hover {
+          background-color: lighten($black, 20%);
+        }
+      }
+    }
+  }
+
+  .end-credits {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    background-color: $dark_grey;
+    padding: 1rem 0;
+
+    p {
+      margin: 0;
+      margin-left: 0.5rem;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      transition: all 250ms ease;
+
+      &:hover {
+        color: darken($white, 10%);
+      }
+    }
+  }
+}

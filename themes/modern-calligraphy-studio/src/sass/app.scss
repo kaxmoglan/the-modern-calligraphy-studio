@@ -3,12 +3,14 @@
 @import "header";
 @import "colors";
 @import "home_page";
+@import "footer";
 
 body {
   font-family: "Lato", sans-serif;
 }
 
-h3 {
+h3,
+h4 {
   font-size: 2.2rem;
   letter-spacing: 0.2rem;
 }
@@ -16,8 +18,4 @@ h3 {
 p {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
-}
-
-.fake-content {
-  height: 200vh;
 }
