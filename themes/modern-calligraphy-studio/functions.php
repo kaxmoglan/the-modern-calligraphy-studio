@@ -44,3 +44,6 @@
   }
 
   add_action('widgets_init', 'my_widgets');
+
+  // FOR DEVELOPMENT PURPOSES ONLY
+  // add_filter( 'wpcf7_validate_configuration', '__return_false' );
