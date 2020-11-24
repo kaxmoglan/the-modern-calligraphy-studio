@@ -21,6 +21,16 @@
         background-color: lighten($black, 30%);
       }
     }
+
+    @include media-breakpoint-down(sm) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+      }
+    }
   }
 }
 
@@ -135,6 +145,10 @@
     h3 {
       margin-bottom: 2rem;
       margin-top: 4rem;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.8rem;
+      }
     }
 
     p {
@@ -167,11 +181,18 @@
   margin-top: 7rem;
   padding: 0;
 
+  @include media-breakpoint-down(sm) {
+    margin-top: 4rem;
+  }
+
   h3 {
     font-size: 1.35rem;
   }
 
   .wp-block-group__inner-container {
+    @include media-breakpoint-down(sm) {
+      padding: 1rem 0;
+    }
     .logos-container {
       .wp-block {
         &-group__inner-container {
@@ -204,6 +225,10 @@
             width: 100%;
             height: auto;
           }
+
+          @include media-breakpoint-down(sm) {
+            transform: scale(0.8);
+          }
         }
       }
     }
@@ -212,6 +237,10 @@
 
 .news-testimonials {
   margin-top: 7rem;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 4rem;
+  }
 
   .wp-block-group__inner-container {
     margin: 0;
@@ -257,6 +286,11 @@
 
         h3 {
           margin: 2rem 0;
+
+          @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+            margin: 1rem 0 2rem 0;
+          }
         }
 
         p {
@@ -273,6 +307,11 @@
           left: 3.5%;
           border: 1px solid $black;
         }
+
+        @include media-breakpoint-down(lg) {
+          min-height: initial;
+          padding-bottom: 2rem;
+        }
       }
 
       .testimonials {
@@ -285,6 +324,10 @@
 
         h3 {
           margin: 2.5rem 0 2rem 0;
+          @include media-breakpoint-down(sm) {
+            font-size: 1.5rem;
+            margin: 1rem 0 2rem 0;
+          }
         }
 
         .testimonial {
@@ -306,6 +349,11 @@
           left: 3.5%;
           border: 1px solid $white;
         }
+
+        @include media-breakpoint-down(lg) {
+          min-height: initial;
+          padding-bottom: 2rem;
+        }
       }
     }
   }
@@ -314,6 +362,10 @@
 .featured-in {
   margin-top: 7rem;
   padding: 0;
+
+  @include media-breakpoint-down(sm) {
+    margin-top: 4rem;
+  }
 
   h3 {
     font-size: 1.35rem;
@@ -365,6 +417,17 @@
     text-align: center;
   }
 
+  @include media-breakpoint-down(sm) {
+    h3 {
+      font-size: 1.5rem;
+      margin: 1rem 0 1rem 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
   .wp-block-group__inner-container {
     display: flex;
     align-items: center;
@@ -378,6 +441,10 @@
 
       @include media-breakpoint-down(lg) {
         text-align: center;
+      }
+
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 2rem;
       }
 
       &__name,

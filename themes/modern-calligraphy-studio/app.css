@@ -11548,7 +11548,7 @@ fieldset:disabled .btn {
   white-space: nowrap;
   text-align: left;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 #header-container #desktop-nav .menu-item .sub-menu .menu-item {
@@ -11785,6 +11785,17 @@ fieldset:disabled .btn {
   background-color: #4d4d4d;
 }
 
+@media (max-width: 575.98px) {
+  .top-banner .wp-block-cover__inner-container h1,
+  .top-banner .wp-block-cover__inner-container .h1 {
+    font-size: 1.5rem;
+  }
+
+  .top-banner .wp-block-cover__inner-container button {
+    font-size: 0.9rem;
+  }
+}
+
 .featured-shop-sections {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -11906,6 +11917,13 @@ fieldset:disabled .btn {
   margin-top: 4rem;
 }
 
+@media (max-width: 575.98px) {
+  .about__content h3,
+  .about__content .h3 {
+    font-size: 1.8rem;
+  }
+}
+
 .about__content p {
   padding: 0 2rem;
 }
@@ -11935,9 +11953,21 @@ fieldset:disabled .btn {
   padding: 0;
 }
 
+@media (max-width: 575.98px) {
+  .stocked-in {
+    margin-top: 4rem;
+  }
+}
+
 .stocked-in h3,
 .stocked-in .h3 {
   font-size: 1.35rem;
+}
+
+@media (max-width: 575.98px) {
+  .stocked-in .wp-block-group__inner-container {
+    padding: 1rem 0;
+  }
 }
 
 .stocked-in .wp-block-group__inner-container .logos-container .wp-block-group__inner-container {
@@ -11972,8 +12002,20 @@ fieldset:disabled .btn {
   height: auto;
 }
 
+@media (max-width: 575.98px) {
+  .stocked-in .wp-block-group__inner-container .logos-container .wp-block-image {
+    transform: scale(0.8);
+  }
+}
+
 .news-testimonials {
   margin-top: 7rem;
+}
+
+@media (max-width: 575.98px) {
+  .news-testimonials {
+    margin-top: 4rem;
+  }
 }
 
 .news-testimonials .wp-block-group__inner-container {
@@ -12030,6 +12072,14 @@ fieldset:disabled .btn {
   margin: 2rem 0;
 }
 
+@media (max-width: 575.98px) {
+  .news-testimonials .wp-block-group__inner-container .content .latest-news h3,
+  .news-testimonials .wp-block-group__inner-container .content .latest-news .h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem 0;
+  }
+}
+
 .news-testimonials .wp-block-group__inner-container .content .latest-news p {
   padding: 0 4rem;
   margin-top: 10%;
@@ -12046,6 +12096,13 @@ fieldset:disabled .btn {
   border: 1px solid #000;
 }
 
+@media (max-width: 991.98px) {
+  .news-testimonials .wp-block-group__inner-container .content .latest-news {
+    min-height: initial;
+    padding-bottom: 2rem;
+  }
+}
+
 .news-testimonials .wp-block-group__inner-container .content .testimonials {
   background-color: #505050;
   color: #fff;
@@ -12058,6 +12115,14 @@ fieldset:disabled .btn {
 .news-testimonials .wp-block-group__inner-container .content .testimonials h3,
 .news-testimonials .wp-block-group__inner-container .content .testimonials .h3 {
   margin: 2.5rem 0 2rem 0;
+}
+
+@media (max-width: 575.98px) {
+  .news-testimonials .wp-block-group__inner-container .content .testimonials h3,
+  .news-testimonials .wp-block-group__inner-container .content .testimonials .h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem 0;
+  }
 }
 
 .news-testimonials .wp-block-group__inner-container .content .testimonials .testimonial {
@@ -12083,9 +12148,22 @@ fieldset:disabled .btn {
   border: 1px solid #fff;
 }
 
+@media (max-width: 991.98px) {
+  .news-testimonials .wp-block-group__inner-container .content .testimonials {
+    min-height: initial;
+    padding-bottom: 2rem;
+  }
+}
+
 .featured-in {
   margin-top: 7rem;
   padding: 0;
+}
+
+@media (max-width: 575.98px) {
+  .featured-in {
+    margin-top: 4rem;
+  }
 }
 
 .featured-in h3,
@@ -12128,6 +12206,18 @@ fieldset:disabled .btn {
   text-align: center;
 }
 
+@media (max-width: 575.98px) {
+  .sign-up-section h3,
+  .sign-up-section .h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+  .sign-up-section p {
+    margin-bottom: 0;
+  }
+}
+
 .sign-up-section .wp-block-group__inner-container {
   display: flex;
   align-items: center;
@@ -12144,6 +12234,12 @@ fieldset:disabled .btn {
 @media (max-width: 991.98px) {
   .sign-up-section .wp-block-group__inner-container .sign-up-form {
     text-align: center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .sign-up-section .wp-block-group__inner-container .sign-up-form {
+    margin-bottom: 2rem;
   }
 }
 
