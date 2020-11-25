@@ -17,7 +17,9 @@
   <div id="header-container" class="main-width container-fluid">
     <header id="header" class="container-md">
       <div id="logo-container" class="row container-fluid justify-content-center">
-        <img alt="" src="<?php header_image(); ?>" class="img-fluid">
+        <a href="/" class="text-center">
+          <img alt="" src="<?php header_image(); ?>" class="img-fluid">
+        </a>
       </div>
 
       <div class="row">

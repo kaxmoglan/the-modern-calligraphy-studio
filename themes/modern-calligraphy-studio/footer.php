@@ -26,28 +26,28 @@
           CONTACT
         </h4>
         <div class="contact__social d-flex justify-content-center">
-          <a href="#">
+          <a href="https://www.etsy.com/uk/shop/ModernCalligraphyUK" target="_blank">
             <i class="fab fa-etsy"></i>
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/themoderncalligraphystudio/" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="#">
+          <a href="https://www.facebook.com/TheModernCalligraphyStudio" target="_blank">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="#">
+          <a href="https://www.tiktok.com/@moderncalligraphystudio" target="_blank">
             <i class="fab fa-tiktok"></i>
           </a>
-          <a href="#">
+          <a href="https://www.youtube.com/channel/UCsd52TO2ulxO6ILzW8RrcPw" target="_blank">
             <i class="fab fa-youtube"></i>
           </a>
-          <a href="#">
+          <a href="https://www.pinterest.co.uk/themoderncalligraphystudio/" target="_blank">
             <i class="fab fa-pinterest-p"></i>
           </a>		
         </div>
         <hr/>
         <div class="contact__email">
-          <a href="#" class="d-flex justify-content-center align-items-center">
+          <a href="mailto:themoderncalligraphystudio@gmail.com" class="d-flex justify-content-center align-items-center">
             <i class="far fa-envelope"></i>
             <p>
               EMAIL US
@@ -102,7 +102,7 @@
       <div class="modal-body">
         <div class="dflex align-items-center justify-content-center">
           <i class="fas fa-box-open d-flex align-items-center justify-content-center"></i>
-          <p class="looking-for">Didn't find what you were looking for?  We're always happy to receive suggestions for new design ideas!</p>
+          <p class="looking-for">Didn't find what you were looking for?<br>We're always happy to receive suggestions for new design ideas!</p>
           <?php echo do_shortcode('[contact-form-7 id="239" title="Suggestions Box"]'); ?>
         </div>
       </div>

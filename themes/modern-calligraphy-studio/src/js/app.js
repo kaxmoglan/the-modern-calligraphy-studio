@@ -6,6 +6,26 @@ const mobileMenuBtn = document.querySelector("#mobile-menu-btn");
 const mobileMenu = document.querySelector("#mobile-nav");
 const mobileMenuContainer = document.querySelector("#mobile-menu-container");
 const hamburger = document.querySelector("#hamburger");
+const wpBlockGroup = document.querySelectorAll(".wp-block-group");
+const imageContainer = document.querySelectorAll(".wp-block-image");
+
+// ADD CLASS NAMES IN GUTENBERG TO IMAGES
+imageContainer.forEach((container) => {
+  if (container.classList.contains("img-fluid")) {
+    const img = container.getElementsByTagName("img")[0];
+    img.classList.add("img-fluid");
+  }
+});
+
+// ADD CLASS NAMES IN GUTENBERG TO INNER CONTAINERS
+wpBlockGroup.forEach((group) => {
+  if (group.classList.contains("row")) {
+    const innerContainer = group.getElementsByClassName(
+      "wp-block-group__inner-container"
+    )[0];
+    innerContainer.classList.add("row");
+  }
+});
 
 let mobileMenuOpen = false;
 

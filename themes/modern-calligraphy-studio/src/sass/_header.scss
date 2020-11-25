@@ -6,6 +6,7 @@
   @include media-breakpoint-down(md) {
     position: sticky;
     top: -11.5rem;
+    margin-bottom: 5rem;
   }
 
   #logo-container {
@@ -153,6 +154,8 @@
     overflow: hidden;
     transition: all 1000ms ease;
     max-height: 45px;
+    position: absolute;
+    left: 0;
 
     &.open {
       max-height: 1000px;

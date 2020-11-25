@@ -4,11 +4,16 @@
 @import "colors";
 @import "home_page";
 @import "footer";
+@import "page";
+@import "social";
 
 body {
   font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
+h1,
+h2,
 h3,
 h4 {
   font-size: 2.2rem;

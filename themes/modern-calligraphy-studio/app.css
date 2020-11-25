@@ -11442,6 +11442,7 @@ fieldset:disabled .btn {
   #header-container {
     position: sticky;
     top: -11.5rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -11587,6 +11588,8 @@ fieldset:disabled .btn {
   overflow: hidden;
   transition: all 1000ms ease;
   max-height: 45px;
+  position: absolute;
+  left: 0;
 }
 
 @media (min-width: 768px) {
@@ -12459,45 +12462,6 @@ footer .links__content a:hover {
   color: #999999;
 }
 
-footer .contact hr {
-  width: 60%;
-  margin: 1rem auto;
-}
-
-footer .contact__social a {
-  padding: 0 0.5rem;
-  color: #000;
-  transition: all 250ms ease;
-}
-
-footer .contact__social a:hover {
-  color: #999999;
-  transform: scale(1.1);
-}
-
-footer .contact__social .fa-instagram {
-  transform: scale(1.15);
-}
-
-footer .contact__email a {
-  color: #000;
-  text-decoration: none;
-  transition: all 250ms ease;
-}
-
-footer .contact__email a p {
-  margin: 0;
-  margin-left: 0.5rem;
-}
-
-footer .contact__email a i {
-  transition: all 250ms ease;
-}
-
-footer .contact__email a:hover {
-  color: #999999;
-}
-
 footer .subscribe form input {
   max-width: 200px;
   text-align: center;
@@ -12544,6 +12508,7 @@ footer .end-credits a:hover {
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
   margin-top: 2rem;
+  text-align: center;
 }
 
 #suggestionsBox .modal-header {
@@ -12581,18 +12546,39 @@ footer .end-credits a:hover {
 
 #suggestionsBox .looking-for {
   text-align: center;
-  margin: 1rem 0 2rem 0;
+  margin: 1rem 2rem 2rem 2rem;
 }
 
 #suggestionsBox form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin: 0 1rem 2rem 1rem;
+}
+
+#suggestionsBox form p {
+  max-width: 100%;
+}
+
+#suggestionsBox form p label {
+  max-width: 100%;
+}
+
+#suggestionsBox form p .wpcf7-form-control-wrap {
+  max-width: 100%;
+}
+
+#suggestionsBox form p .wpcf7-form-control-wrap input {
+  max-width: 100%;
+}
+
+#suggestionsBox form p .wpcf7-form-control-wrap textarea {
+  max-width: 100%;
 }
 
 .modal-content {
   background-color: #f9f9f9;
+  border-radius: 0;
 }
 
 .modal-body {
@@ -12610,10 +12596,75 @@ footer .end-credits a:hover {
   border: 1px solid black;
 }
 
-body {
-  font-family: "Lato", sans-serif;
+#default-page-template .container {
+  padding: 0;
 }
 
+.contact hr {
+  width: 60%;
+  margin: 1rem auto;
+}
+
+.contact__social a {
+  padding: 0 0.5rem;
+  color: #000;
+  transition: all 250ms ease;
+}
+
+.contact__social a:hover {
+  color: #999999;
+  transform: scale(1.1);
+}
+
+.contact__social .fa-instagram {
+  transform: scale(1.15);
+}
+
+.contact__email a {
+  color: #000;
+  text-decoration: none;
+  transition: all 250ms ease;
+}
+
+.contact__email a p {
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.contact__email a i {
+  transition: all 250ms ease;
+}
+
+.contact__email a:hover {
+  color: #999999;
+}
+
+.instagram-section {
+  padding: 0;
+  margin: 7rem auto;
+}
+
+.instagram-section h3,
+.instagram-section .h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.instagram-section .sbi_follow_btn {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+.h1,
+h2,
+.h2,
 h3,
 .h3,
 h4,
