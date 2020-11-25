@@ -3,12 +3,14 @@
     padding: 0;
   }
 
-  // .wp-block-group {
-  //   margin: 0 auto;
+  .bg-light-grey {
+    background-color: $light_grey;
+    margin: 0;
+  }
 
-  //   &__inner-container {
-  //     margin: 0 auto;
-  //     padding: 0;
-  //   }
-  // }
+  #contact-send-btn {
+    &:hover {
+      background-color: lighten($black, 30%);
+    }
+  }
 }

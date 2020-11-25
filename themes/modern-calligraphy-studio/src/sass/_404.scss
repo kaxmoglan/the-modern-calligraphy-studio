@@ -1,0 +1,12 @@
+#page-404 {
+  a {
+    letter-spacing: 0.1rem;
+
+    &:hover {
+      background-color: lighten($black, 20%);
+    }
+  }
+  h1 {
+    letter-spacing: 0.1rem;
+  }
+}

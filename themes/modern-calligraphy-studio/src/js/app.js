@@ -25,6 +25,12 @@ wpBlockGroup.forEach((group) => {
     )[0];
     innerContainer.classList.add("row");
   }
+  if (group.classList.contains("justify-content-center")) {
+    const innerContainer = group.getElementsByClassName(
+      "wp-block-group__inner-container"
+    )[0];
+    innerContainer.classList.add("justify-content-center");
+  }
 });
 
 let mobileMenuOpen = false;

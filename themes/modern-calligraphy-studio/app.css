@@ -11556,14 +11556,14 @@ fieldset:disabled .btn {
   padding: 0.3rem;
 }
 
-#header-container #desktop-nav .menu-item i {
+#header-container #desktop-nav .menu-item svg {
   margin-left: 0.2rem;
   transition: all 750ms ease;
 }
 
-#header-container #desktop-nav .menu-item:hover i,
-#header-container #desktop-nav .menu-item:focus i,
-#header-container #desktop-nav .menu-item:active i {
+#header-container #desktop-nav .menu-item:hover svg,
+#header-container #desktop-nav .menu-item:focus svg,
+#header-container #desktop-nav .menu-item:active svg {
   transform: rotate(-180deg);
 }
 
@@ -11706,7 +11706,7 @@ fieldset:disabled .btn {
   position: relative;
 }
 
-#header-container #mobile-nav #mobile-menu-container .menu-item i {
+#header-container #mobile-nav #mobile-menu-container .menu-item svg {
   margin-left: 0.2rem;
   transition: all 500ms ease-out;
 }
@@ -11753,7 +11753,7 @@ fieldset:disabled .btn {
   opacity: 1;
 }
 
-#header-container #mobile-nav #mobile-menu-container .menu-item.open i {
+#header-container #mobile-nav #mobile-menu-container .menu-item.open svg {
   transform: rotate(-180deg);
 }
 
@@ -12408,23 +12408,6 @@ fieldset:disabled .btn {
   }
 }
 
-.instagram-section {
-  padding: 0;
-  margin: 7rem auto;
-}
-
-.instagram-section h3,
-.instagram-section .h3 {
-  font-size: 1.35rem;
-  margin-bottom: 1rem;
-}
-
-.instagram-section .sbi_follow_btn {
-  margin-top: 1rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.1rem;
-}
-
 footer {
   background-color: #f9f9f9;
   text-align: center;
@@ -12600,6 +12583,15 @@ footer .end-credits a:hover {
   padding: 0;
 }
 
+#default-page-template .bg-light-grey {
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+#default-page-template #contact-send-btn:hover {
+  background-color: #4d4d4d;
+}
+
 .contact hr {
   width: 60%;
   margin: 1rem auto;
@@ -12653,6 +12645,19 @@ footer .end-credits a:hover {
 .instagram-section .sbi_follow_btn {
   margin-top: 1rem;
   font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+#page-404 a {
+  letter-spacing: 0.1rem;
+}
+
+#page-404 a:hover {
+  background-color: #333333;
+}
+
+#page-404 h1,
+#page-404 .h1 {
   letter-spacing: 0.1rem;
 }
 
