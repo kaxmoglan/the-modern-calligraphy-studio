@@ -29,12 +29,17 @@
                     } else { // If logged in:
                 ?>
                         <p class="fs-5 mb-0">You are currently logged in as</p>
-                        <p class="fs-3 mb-5"><?php echo $current_user->display_name;?></p>
-                <?php
-                        wp_loginout( home_url() ); // Display "Log Out" link.
+                        <p class="username fs-3">@<?php echo $current_user->display_name;?></p>
+                        <hr class="my-4">
+                        <div class="d-flex align-items-center justify-content-center logged-in-links">
+                            <a href="/about">TRADE SHOP</a> 
+                            <p> | </p>
+                            <?php wp_loginout( home_url() ); // Display "Log Out" link. ?>
+                        </div>
+                      
+                <?php } ?>
                         
-                    }
-                ?>
+                
             </div>
 
             <div class="login__border-top"></div>

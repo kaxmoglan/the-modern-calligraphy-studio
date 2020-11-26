@@ -9,6 +9,9 @@
   }
 
   .sign-up {
+    h2 {
+      line-height: 2rem;
+    }
     #apply-now {
       letter-spacing: 0.1rem;
     }
@@ -100,28 +103,46 @@
     }
 
     &__content {
+      display: relative;
+
       a {
-        color: $white;
+        color: $black;
         text-decoration: none;
-        padding: 0.5rem 1rem;
-        background-color: $black;
-        border-radius: 0.25rem;
         transition: all 250ms ease;
         text-transform: uppercase;
         letter-spacing: 0.1rem;
 
         &:hover {
-          background-color: lighten($black, 30%);
+          color: lighten($black, 60%);
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 0 1rem;
+      }
+      .logged-in-links {
+        a {
+          text-decoration: underline;
         }
       }
     }
 
     #loginform-custom {
+      margin-top: 2rem;
+
       label {
         display: block;
       }
       .input {
         text-align: center;
+        letter-spacing: 0.05rem;
+      }
+      .login-submit {
+        margin-top: 2rem;
+      }
+      p {
+        margin: 1rem 0;
       }
       #wp-submit {
         border: none;

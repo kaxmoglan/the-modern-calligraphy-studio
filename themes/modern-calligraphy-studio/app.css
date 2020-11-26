@@ -12564,10 +12564,12 @@ footer .end-credits a:hover {
 
 #suggestionsBox form p .wpcf7-form-control-wrap input {
   max-width: 100%;
+  letter-spacing: 0.05rem;
 }
 
 #suggestionsBox form p .wpcf7-form-control-wrap textarea {
   max-width: 100%;
+  letter-spacing: 0.05rem;
 }
 
 #suggestionsBox form p .btn:hover {
@@ -12600,6 +12602,12 @@ footer .end-credits a:hover {
 
 #default-page-template #contact-send-btn:hover {
   background-color: #4d4d4d;
+}
+
+#default-page-template form input,
+#default-page-template form textarea,
+#default-page-template form select {
+  letter-spacing: 0.05rem;
 }
 
 #default-page-template a {
@@ -12688,6 +12696,11 @@ footer .end-credits a:hover {
 
 #wholesale-page #drop-email:hover {
   color: #999999;
+}
+
+#wholesale-page .sign-up h2,
+#wholesale-page .sign-up .h2 {
+  line-height: 2rem;
 }
 
 #wholesale-page .sign-up #apply-now {
@@ -12806,19 +12819,33 @@ footer .end-credits a:hover {
   pointer-events: none;
 }
 
+#wholesale-page .log-in__content {
+  display: relative;
+}
+
 #wholesale-page .log-in__content a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  background-color: #000;
-  border-radius: 0.25rem;
   transition: all 250ms ease;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
 #wholesale-page .log-in__content a:hover {
-  background-color: #4d4d4d;
+  color: #999999;
+}
+
+#wholesale-page .log-in__content p {
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+#wholesale-page .log-in__content .logged-in-links a {
+  text-decoration: underline;
+}
+
+#wholesale-page .log-in #loginform-custom {
+  margin-top: 2rem;
 }
 
 #wholesale-page .log-in #loginform-custom label {
@@ -12827,6 +12854,15 @@ footer .end-credits a:hover {
 
 #wholesale-page .log-in #loginform-custom .input {
   text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+#wholesale-page .log-in #loginform-custom .login-submit {
+  margin-top: 2rem;
+}
+
+#wholesale-page .log-in #loginform-custom p {
+  margin: 1rem 0;
 }
 
 #wholesale-page .log-in #loginform-custom #wp-submit {
