@@ -1,0 +1,144 @@
+#wholesale-page {
+  #drop-email {
+    color: inherit;
+    transition: all 250ms ease;
+
+    &:hover {
+      color: lighten($black, 60%);
+    }
+  }
+
+  .sign-up {
+    #apply-now {
+      letter-spacing: 0.1rem;
+    }
+
+    &__border {
+      &-top,
+      &-right,
+      &-bottom,
+      &-left {
+        position: absolute;
+        border: none;
+        background-color: $black;
+      }
+      &-bottom,
+      &-top {
+        width: 72%;
+        height: 0.5px;
+
+        @include media-breakpoint-down(lg) {
+          width: 62%;
+        }
+        @include media-breakpoint-down(md) {
+          width: 71%;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 66%;
+        }
+      }
+      &-right,
+      &-left {
+        width: 0.5px;
+        height: 77%;
+
+        @include media-breakpoint-down(lg) {
+          height: 78%;
+        }
+        @include media-breakpoint-down(md) {
+          height: 70%;
+        }
+        @include media-breakpoint-down(sm) {
+          height: 75%;
+        }
+      }
+
+      &-bottom,
+      &-right {
+        bottom: 1.5rem;
+        right: 1.75rem;
+      }
+      &-top,
+      &-left {
+        top: 1.5rem;
+        left: 1.75rem;
+      }
+    }
+
+    .flourish {
+      position: absolute;
+      width: 85px;
+
+      @include media-breakpoint-down(sm) {
+        width: 75px;
+      }
+
+      &:nth-of-type(1) {
+        transform: rotate(30deg);
+        top: 1.5rem;
+        right: 1rem;
+      }
+      &:nth-of-type(2) {
+        transform: rotate(30deg) scaleY(-1);
+        bottom: 0.5rem;
+        left: 1rem;
+      }
+    }
+  }
+
+  .log-in {
+    min-height: 450px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 90%;
+      height: 88%;
+      border: 1px solid black;
+      pointer-events: none;
+    }
+
+    &__content {
+      a {
+        color: $white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        background-color: $black;
+        border-radius: 0.25rem;
+        transition: all 250ms ease;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+
+        &:hover {
+          background-color: lighten($black, 30%);
+        }
+      }
+    }
+
+    #loginform-custom {
+      label {
+        display: block;
+      }
+      .input {
+        text-align: center;
+      }
+      #wp-submit {
+        border: none;
+        background: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+
+        background-color: $black;
+        color: $white;
+        border-radius: 0.25rem;
+        padding: 0.5rem 1rem;
+        transition: all 250ms ease;
+
+        &:hover {
+          background-color: lighten($black, 30%);
+        }
+      }
+    }
+  }
+}

@@ -3,14 +3,19 @@
     padding: 0;
   }
 
-  .bg-light-grey {
-    background-color: $light_grey;
-    margin: 0;
-  }
-
   #contact-send-btn {
     &:hover {
       background-color: lighten($black, 30%);
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 250ms ease;
+
+    &:hover {
+      color: lighten($black, 30%);
     }
   }
 }

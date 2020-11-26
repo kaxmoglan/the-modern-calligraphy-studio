@@ -7,6 +7,7 @@
 @import "page";
 @import "social";
 @import "404";
+@import "wholesale";
 
 body {
   font-family: "Lato", sans-serif;
@@ -24,4 +25,15 @@ h4 {
 p {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
+}
+
+.bg-light-grey {
+  background-color: $light_grey;
+  margin: 0;
+}
+
+.btn {
+  &:hover {
+    background-color: lighten($black, 30%);
+  }
 }

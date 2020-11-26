@@ -11441,7 +11441,7 @@ fieldset:disabled .btn {
 @media (max-width: 767.98px) {
   #header-container {
     position: sticky;
-    top: -11.5rem;
+    top: -12.5rem;
     margin-bottom: 5rem;
   }
 }
@@ -12190,11 +12190,17 @@ fieldset:disabled .btn {
 
 .featured-in .wp-block-group__inner-container .images-container .wp-block-image figure {
   margin: 0;
+  overflow: hidden;
+}
+
+.featured-in .wp-block-group__inner-container .images-container .wp-block-image:hover img {
+  transform: scale(1.1);
 }
 
 .featured-in .wp-block-group__inner-container .images-container .wp-block-image img {
   width: 100%;
   height: auto;
+  transition: all 500ms ease;
 }
 
 .sign-up-section {
@@ -12439,6 +12445,7 @@ footer .links__content a {
   letter-spacing: 0.1rem;
   margin-bottom: 0.5rem;
   transition: all 250ms ease;
+  text-transform: uppercase;
 }
 
 footer .links__content a:hover {
@@ -12500,6 +12507,10 @@ footer .end-credits a:hover {
   border-bottom: none;
 }
 
+#suggestionsBox .btn:hover {
+  background-color: initial;
+}
+
 #suggestionsBox__close {
   padding: 0;
   width: 2rem;
@@ -12559,6 +12570,10 @@ footer .end-credits a:hover {
   max-width: 100%;
 }
 
+#suggestionsBox form p .btn:hover {
+  background-color: #4d4d4d;
+}
+
 .modal-content {
   background-color: #f9f9f9;
   border-radius: 0;
@@ -12583,13 +12598,18 @@ footer .end-credits a:hover {
   padding: 0;
 }
 
-#default-page-template .bg-light-grey {
-  background-color: #f9f9f9;
-  margin: 0;
-}
-
 #default-page-template #contact-send-btn:hover {
   background-color: #4d4d4d;
+}
+
+#default-page-template a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 250ms ease;
+}
+
+#default-page-template a:hover {
+  color: #4d4d4d;
 }
 
 .contact hr {
@@ -12661,6 +12681,170 @@ footer .end-credits a:hover {
   letter-spacing: 0.1rem;
 }
 
+#wholesale-page #drop-email {
+  color: inherit;
+  transition: all 250ms ease;
+}
+
+#wholesale-page #drop-email:hover {
+  color: #999999;
+}
+
+#wholesale-page .sign-up #apply-now {
+  letter-spacing: 0.1rem;
+}
+
+#wholesale-page .sign-up__border-top,
+#wholesale-page .sign-up__border-right,
+#wholesale-page .sign-up__border-bottom,
+#wholesale-page .sign-up__border-left {
+  position: absolute;
+  border: none;
+  background-color: #000;
+}
+
+#wholesale-page .sign-up__border-bottom,
+#wholesale-page .sign-up__border-top {
+  width: 72%;
+  height: 0.5px;
+}
+
+@media (max-width: 991.98px) {
+  #wholesale-page .sign-up__border-bottom,
+  #wholesale-page .sign-up__border-top {
+    width: 62%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #wholesale-page .sign-up__border-bottom,
+  #wholesale-page .sign-up__border-top {
+    width: 71%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #wholesale-page .sign-up__border-bottom,
+  #wholesale-page .sign-up__border-top {
+    width: 66%;
+  }
+}
+
+#wholesale-page .sign-up__border-right,
+#wholesale-page .sign-up__border-left {
+  width: 0.5px;
+  height: 77%;
+}
+
+@media (max-width: 991.98px) {
+  #wholesale-page .sign-up__border-right,
+  #wholesale-page .sign-up__border-left {
+    height: 78%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #wholesale-page .sign-up__border-right,
+  #wholesale-page .sign-up__border-left {
+    height: 70%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #wholesale-page .sign-up__border-right,
+  #wholesale-page .sign-up__border-left {
+    height: 75%;
+  }
+}
+
+#wholesale-page .sign-up__border-bottom,
+#wholesale-page .sign-up__border-right {
+  bottom: 1.5rem;
+  right: 1.75rem;
+}
+
+#wholesale-page .sign-up__border-top,
+#wholesale-page .sign-up__border-left {
+  top: 1.5rem;
+  left: 1.75rem;
+}
+
+#wholesale-page .sign-up .flourish {
+  position: absolute;
+  width: 85px;
+}
+
+@media (max-width: 575.98px) {
+  #wholesale-page .sign-up .flourish {
+    width: 75px;
+  }
+}
+
+#wholesale-page .sign-up .flourish:nth-of-type(1) {
+  transform: rotate(30deg);
+  top: 1.5rem;
+  right: 1rem;
+}
+
+#wholesale-page .sign-up .flourish:nth-of-type(2) {
+  transform: rotate(30deg) scaleY(-1);
+  bottom: 0.5rem;
+  left: 1rem;
+}
+
+#wholesale-page .log-in {
+  min-height: 450px;
+}
+
+#wholesale-page .log-in:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 88%;
+  border: 1px solid black;
+  pointer-events: none;
+}
+
+#wholesale-page .log-in__content a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: #000;
+  border-radius: 0.25rem;
+  transition: all 250ms ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+#wholesale-page .log-in__content a:hover {
+  background-color: #4d4d4d;
+}
+
+#wholesale-page .log-in #loginform-custom label {
+  display: block;
+}
+
+#wholesale-page .log-in #loginform-custom .input {
+  text-align: center;
+}
+
+#wholesale-page .log-in #loginform-custom #wp-submit {
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: all 250ms ease;
+}
+
+#wholesale-page .log-in #loginform-custom #wp-submit:hover {
+  background-color: #4d4d4d;
+}
+
 body {
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
@@ -12681,5 +12865,14 @@ h4,
 p {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
+}
+
+.bg-light-grey {
+  background-color: #f9f9f9;
+  margin: 0;
+}
+
+.btn:hover {
+  background-color: #4d4d4d;
 }
 

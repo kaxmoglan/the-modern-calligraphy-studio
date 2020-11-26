@@ -386,20 +386,22 @@
           flex: 0 0 210px;
           cursor: pointer;
           transition: all 500ms ease;
-          // opacity: 0.65;
 
           figure {
             margin: 0;
+            overflow: hidden;
           }
 
-          // &:hover {
-          //   transform: scale(1.1);
-          //   opacity: 1;
-          // }
+          &:hover {
+            img {
+              transform: scale(1.1);
+            }
+          }
 
           img {
             width: 100%;
             height: auto;
+            transition: all 500ms ease;
           }
         }
       }

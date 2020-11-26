@@ -17,7 +17,12 @@
           <a href="#">PRIVACY POLICY</a>
           <a href="#">TERMS & CONDITIONS</a>
           <a href="#">RETURNS POLICY</a>
-          <a href="#">SHIPPING</a>		
+          <a href="#">SHIPPING</a>
+          <?php 
+            if ( is_user_logged_in() ) {
+              wp_loginout( home_url() );
+            }
+          ?>
         </div>
       </div>
       
