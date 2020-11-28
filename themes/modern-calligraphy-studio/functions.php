@@ -47,3 +47,53 @@
 
   // FOR DEVELOPMENT PURPOSES ONLY
   // add_filter( 'wpcf7_validate_configuration', '__return_false' );
+
+// DECLARE WOOCOMMERCE SUPPORT
+function mytheme_add_woocommerce_support() {
+  add_theme_support( 'woocommerce', array(
+      'thumbnail_image_width' => 150,
+      'single_image_width'    => 300,
+
+      'product_grid'          => array(
+          'default_rows'    => 3,
+          'min_rows'        => 2,
+          'max_rows'        => 8,
+          'default_columns' => 4,
+          'min_columns'     => 2,
+          'max_columns'     => 5,
+      ),
+  ) );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+add_theme_support( 'wc-product-gallery-zoom' );
+add_theme_support( 'wc-product-gallery-lightbox' );
+add_theme_support( 'wc-product-gallery-slider' );
+
+// LET'S BRITISH THIS STORE UP YEH?
+add_filter('gettext', 
+		   
+		   function ($translated_text, $text, $domain) {
+
+			if ($domain == 'woocommerce') {
+				switch ($translated_text) {
+					case 'Cart totals':
+						$translated_text = __('Order summary', 'woocommerce');
+						break;
+					case 'Update cart':
+						$translated_text = __('Update basket', 'woocommerce');
+						break;
+					case 'Add to cart':
+						$translated_text = __('Add to basket', 'woocommerce');
+						break;
+					case 'View cart':
+						$translated_text = __('View basket', 'woocommerce');
+						break;
+				}
+			}
+
+			return $translated_text;
+
+		}, 
+20, 3);
