@@ -31,6 +31,12 @@ wpBlockGroup.forEach((group) => {
     )[0];
     innerContainer.classList.add("justify-content-center");
   }
+  if (group.classList.contains("align-items-center")) {
+    const innerContainer = group.getElementsByClassName(
+      "wp-block-group__inner-container"
+    )[0];
+    innerContainer.classList.add("align-items-center");
+  }
 });
 
 let mobileMenuOpen = false;

@@ -5,7 +5,7 @@
 
   #contact-send-btn {
     &:hover {
-      background-color: lighten($black, 30%);
+      background-color: lighten($black, 20%);
     }
   }
 
@@ -24,6 +24,31 @@
 
     &:hover {
       color: lighten($black, 30%);
+    }
+  }
+
+  .add-dark-square-img {
+    figure {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 93%;
+        height: 93%;
+        top: 3.5%;
+        left: 3.5%;
+        pointer-events: none;
+        border: 1px solid $dark_grey;
+      }
+    }
+  }
+  .btn-container {
+    a {
+      &:hover {
+        color: inherit;
+      }
     }
   }
 }

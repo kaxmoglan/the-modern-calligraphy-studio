@@ -79,7 +79,7 @@ footer {
       transition: all 250ms ease;
 
       &:hover {
-        color: darken($white, 10%);
+        text-decoration: underline;
       }
     }
   }
