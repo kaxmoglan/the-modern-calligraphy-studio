@@ -11436,6 +11436,7 @@ fieldset:disabled .btn {
   background-color: #fff;
   position: relative;
   z-index: 1000;
+  padding: 0;
 }
 
 @media (max-width: 767.98px) {
@@ -11444,6 +11445,82 @@ fieldset:disabled .btn {
     top: -9.5rem;
     margin-bottom: 5rem;
   }
+}
+
+#header-container #top-bar {
+  padding: 0;
+  background-color: #f9f9f9;
+  height: 30px;
+  position: relative;
+}
+
+#header-container #top-bar .shop-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#header-container #top-bar .shop-icons li {
+  padding: 0 0.5rem;
+}
+
+#header-container #top-bar .shop-icons li svg {
+  color: #000;
+  transition: all 250ms ease;
+}
+
+#header-container #top-bar .shop-icons li:hover {
+  cursor: pointer;
+}
+
+#header-container #top-bar .shop-icons li:hover svg {
+  color: #999999;
+  transform: scale(1.1);
+}
+
+#header-container #top-bar .search-pop-up {
+  position: absolute;
+  right: 5rem;
+  top: 100%;
+  z-index: 2000;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: all 250ms ease;
+}
+
+#header-container #top-bar .search-pop-up .woocommerce-product-search {
+  position: relative;
+}
+
+#header-container #top-bar .search-pop-up .woocommerce-product-search .search-field {
+  position: relative;
+  border-radius: 0.5rem;
+  border: 1px solid #505050;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  padding: 0.1rem 2rem 0.1rem 0.5rem;
+}
+
+#header-container #top-bar .search-pop-up .woocommerce-product-search .search-field:focus {
+  outline: none;
+}
+
+#header-container #top-bar .search-pop-up .woocommerce-product-search button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.08rem;
+}
+
+#header-container #top-bar .search-pop-up .woocommerce-product-search button svg {
+  width: 0.75rem;
+}
+
+#header-container #top-bar .search-pop-up.open {
+  transform: scale(1);
 }
 
 #header-container #logo-container {
@@ -13370,10 +13447,6 @@ footer .end-credits a:hover {
   margin-bottom: 1.5rem;
 }
 
-#woocommerce-page-template .woocommerce-form-login label {
-  text-transform: uppercase;
-}
-
 #woocommerce-page-template .woocommerce-form-login input {
   letter-spacing: 0.05rem;
 }
@@ -13385,6 +13458,10 @@ footer .end-credits a:hover {
 
 #woocommerce-page-template .woocommerce-form-login a:hover {
   color: #999999;
+}
+
+#woocommerce-page-template .woocommerce-form-login .form-row {
+  margin: 1rem 0;
 }
 
 .woocommerce #respond input#submit,
@@ -13404,6 +13481,119 @@ footer .end-credits a:hover {
 .woocommerce input.button:hover {
   background-color: #4d4d4d;
   color: #fff;
+}
+
+#woocommerce-page-template .my-account-header {
+  margin-bottom: 3rem;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-navigation ul li {
+  margin-bottom: 0.5rem;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-navigation ul li a {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  transition: all 250ms ease;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-navigation ul li a:hover {
+  color: #999999;
+}
+
+@media (max-width: 767.98px) {
+  #woocommerce-page-template .woocommerce-MyAccount-navigation ul {
+    margin-bottom: 3rem;
+  }
+
+  #woocommerce-page-template .woocommerce-MyAccount-navigation ul li {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-content a {
+  color: #000;
+  transition: all 250ms ease;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-content a:hover {
+  color: #999999;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-content .woocommerce-Addresses h3,
+#woocommerce-page-template .woocommerce-MyAccount-content .woocommerce-Addresses .h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-content .woocommerce-Addresses header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-content .woocommerce-Addresses .edit {
+  float: none;
+}
+
+@media (max-width: 767.98px) {
+  #woocommerce-page-template .woocommerce-MyAccount-content .woocommerce-Addresses header {
+    justify-content: center;
+  }
+}
+
+#woocommerce-page-template .woocommerce-MyAccount-content .woocommerce-EditAccountForm fieldset {
+  margin-top: 3rem;
+}
+
+@media (max-width: 767.98px) {
+  #woocommerce-page-template .woocommerce-MyAccount-content {
+    text-align: center;
+  }
+}
+
+#woocommerce-page-template #customer_login h2,
+#woocommerce-page-template #customer_login .h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+#woocommerce-page-template #customer_login .woocommerce-form-login,
+#woocommerce-page-template #customer_login .woocommerce-form-register {
+  margin-top: 0;
+}
+
+#woocommerce-page-template #customer_login .woocommerce-form-register .woocommerce-privacy-policy-text p {
+  font-size: 0.75rem;
+}
+
+#woocommerce-page-template #customer_login .woocommerce-form-register .woocommerce-privacy-policy-text p a {
+  color: #000;
+  transition: all 250ms ease;
+}
+
+#woocommerce-page-template #customer_login .woocommerce-form-register .woocommerce-privacy-policy-text p a:hover {
+  color: #999999;
+}
+
+@media (max-width: 767.98px) {
+  #woocommerce-page-template #customer_login h2,
+  #woocommerce-page-template #customer_login .h2 {
+    text-align: center;
+  }
 }
 
 body {

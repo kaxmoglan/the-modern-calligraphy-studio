@@ -454,9 +454,6 @@
   }
 
   .woocommerce-form-login {
-    label {
-      text-transform: uppercase;
-    }
     input {
       letter-spacing: 0.05rem;
     }
@@ -467,6 +464,10 @@
       &:hover {
         color: lighten($black, 60%);
       }
+    }
+
+    .form-row {
+      margin: 1rem 0;
     }
   }
 }

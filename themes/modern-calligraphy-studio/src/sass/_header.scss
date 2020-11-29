@@ -2,11 +2,87 @@
   background-color: $white;
   position: relative;
   z-index: 1000;
+  padding: 0;
 
   @include media-breakpoint-down(md) {
     position: sticky;
     top: -9.5rem;
     margin-bottom: 5rem;
+  }
+
+  #top-bar {
+    padding: 0;
+    background-color: $light_grey;
+    height: 30px;
+    position: relative;
+
+    .shop-icons {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 0 0.5rem;
+
+        svg {
+          color: $black;
+          transition: all 250ms ease;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          svg {
+            color: lighten($black, 60%);
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .search-pop-up {
+      position: absolute;
+      right: 5rem;
+      top: 100%;
+      z-index: 2000;
+
+      .woocommerce-product-search {
+        position: relative;
+        .search-field {
+          position: relative;
+          border-radius: 0.5rem;
+          border: 1px solid $dark_grey;
+          font-size: 0.8rem;
+          letter-spacing: 0.05rem;
+          padding: 0.1rem 2rem 0.1rem 0.5rem;
+
+          &:focus {
+            outline: none;
+          }
+        }
+        button {
+          background: none;
+          border: none;
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          right: 0.5rem;
+          top: 0.08rem;
+
+          svg {
+            width: 0.75rem;
+          }
+        }
+      }
+
+      transform: scale(0);
+      transform-origin: top right;
+      transition: all 250ms ease;
+
+      &.open {
+        transform: scale(1);
+      }
+    }
   }
 
   #logo-container {

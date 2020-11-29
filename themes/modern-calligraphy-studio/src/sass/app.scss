@@ -1,7 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
-@import "header";
 @import "colors";
+@import "header";
 @import "home_page";
 @import "footer";
 @import "page";
@@ -9,6 +9,7 @@
 @import "404";
 @import "wholesale";
 @import "woocommerce";
+@import "my_account";
 
 body {
   font-family: "Lato", sans-serif;

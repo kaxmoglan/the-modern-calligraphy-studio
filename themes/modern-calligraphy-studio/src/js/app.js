@@ -8,6 +8,43 @@ const mobileMenuContainer = document.querySelector("#mobile-menu-container");
 const hamburger = document.querySelector("#hamburger");
 const wpBlockGroup = document.querySelectorAll(".wp-block-group");
 const imageContainer = document.querySelectorAll(".wp-block-image");
+const searchBtn = document.querySelector("#search-btn");
+const searchBox = document.querySelector(".search-pop-up");
+const searchInput = document.querySelector(".search-field");
+const body = document.querySelector("body");
+
+// SEARCH BOX POP UP
+
+let searchBoxOpen = false;
+
+const openSearchBox = () => {
+  searchBox.classList.add("open");
+  searchBoxOpen = true;
+  searchInput.focus();
+};
+
+const closeSearchBox = () => {
+  searchBox.classList.remove("open");
+  searchBoxOpen = false;
+};
+
+const handleSearchBox = () => {
+  if (searchBoxOpen) {
+    closeSearchBox();
+  } else {
+    openSearchBox();
+  }
+};
+
+window.addEventListener("click", (e) => {
+  if (searchBtn.contains(e.target)) {
+    handleSearchBox();
+  } else {
+    if (searchBoxOpen) {
+      closeSearchBox();
+    }
+  }
+});
 
 // ADD CLASS NAMES IN GUTENBERG TO IMAGES
 imageContainer.forEach((container) => {

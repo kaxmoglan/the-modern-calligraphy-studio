@@ -18,6 +18,8 @@
           <a href="#">TERMS & CONDITIONS</a>
           <a href="#">RETURNS POLICY</a>
           <a href="#">SHIPPING</a>
+          <a href="/my-account">MY ACCOUNT</a>
+          <a href="/basket">BASKET</a>
           <?php 
             if ( is_user_logged_in() ) {
               wp_loginout( home_url() );
