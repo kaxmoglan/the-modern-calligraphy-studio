@@ -11,10 +11,9 @@ const imageContainer = document.querySelectorAll(".wp-block-image");
 const searchBtn = document.querySelector("#search-btn");
 const searchBox = document.querySelector(".search-pop-up");
 const searchInput = document.querySelector(".search-field");
-const body = document.querySelector("body");
+const navPadding = document.querySelector("#nav-padding");
 
 // SEARCH BOX POP UP
-
 let searchBoxOpen = false;
 
 const openSearchBox = () => {
@@ -41,6 +40,7 @@ window.addEventListener("click", (e) => {
     handleSearchBox();
   } else {
     if (searchBoxOpen) {
+      e.preventDefault();
       closeSearchBox();
     }
   }
@@ -113,12 +113,16 @@ parentMenus.forEach((menu) => {
 window.onscroll = () => {
   "use strict";
   if (
-    document.body.scrollTop >= 215 ||
-    document.documentElement.scrollTop >= 215
+    document.body.scrollTop >= 260 ||
+    document.documentElement.scrollTop >= 260
   ) {
     navbar.classList.add("full-width");
+    mobileMenu.classList.add("fix");
+    navPadding.classList.add("active");
   } else {
     navbar.classList.remove("full-width");
+    mobileMenu.classList.remove("fix");
+    navPadding.classList.remove("active");
   }
 };
 

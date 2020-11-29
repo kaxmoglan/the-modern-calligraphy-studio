@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<div id="nav-padding"></div>
+
 <div id="wholesale-page" class="container mb-5">
     <div class="row mt-5">
         <h1 class="text-center">WHOLESALE</h1>

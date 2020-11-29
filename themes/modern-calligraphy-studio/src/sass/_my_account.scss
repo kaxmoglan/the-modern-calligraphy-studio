@@ -47,6 +47,7 @@
     }
 
     .woocommerce-Addresses {
+      // text-align: center;
       h3 {
         font-size: 1.5rem;
         margin-top: 2rem;
@@ -74,6 +75,55 @@
       fieldset {
         margin-top: 3rem;
       }
+      input {
+        letter-spacing: 0.05rem;
+      }
+    }
+
+    .woocommerce-orders-table {
+      thead tr th {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 0.1rem;
+      }
+
+      tbody tr {
+        .woocommerce-orders-table__cell {
+          .woocommerce-button {
+            color: $white;
+            margin: 0.1rem;
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+
+    .woocommerce-order-details {
+      h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
+      table {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+
+        th {
+        }
+      }
+    }
+
+    .woocommerce-customer-details {
+      margin-top: 3rem;
+
+      h2 {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
     }
 
     @include media-breakpoint-down(md) {
@@ -82,6 +132,50 @@
   }
 
   #customer_login {
+    text-align: center;
+
+    form {
+      padding: 0;
+      text-align: center;
+      border: none;
+
+      input {
+        text-align: center;
+      }
+
+      .woocommerce-form-login__rememberme {
+        display: block;
+      }
+
+      .woocommerce-form-login__submit {
+        float: none;
+        margin-top: 1rem;
+      }
+    }
+
+    .u-column1,
+    .u-column2 {
+      padding: 2rem;
+      position: relative;
+      min-height: 346px;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 93%;
+        height: 93%;
+        position: absolute;
+        top: 3.5%;
+        left: 3.5%;
+        pointer-events: none;
+        border: 1px solid $black;
+      }
+    }
+
+    .u-column2 {
+      background-color: $light_grey;
+    }
+
     h2 {
       font-size: 1.8rem;
       text-transform: uppercase;
@@ -116,4 +210,22 @@
       }
     }
   }
+}
+
+// SHOW PASSWORD ALIGNMENT
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::after {
+    margin: 0;
+  }
+}
+
+.woocommerce form .password-input input[type="password"],
+.woocommerce-page form .password-input input[type="password"] {
+  padding-right: 1em;
 }

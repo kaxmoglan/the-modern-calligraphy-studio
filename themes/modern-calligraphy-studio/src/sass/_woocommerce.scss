@@ -1,12 +1,50 @@
 #woocommerce-page-template {
   margin-bottom: 7rem;
 
+  @include media-breakpoint-down(md) {
+    padding-top: 2rem;
+  }
+
+  .woocommerce-breadcrumb {
+    margin-bottom: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    color: rgb(118, 118, 118);
+
+    a {
+      transition: all 250ms ease;
+      color: inherit;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .woocommerce-notices-wrapper {
+    a {
+      color: $black;
+      transition: all 250ms ease;
+
+      &:hover {
+        color: lighten($black, 60%);
+      }
+    }
+  }
+
   .container {
     padding: 0;
   }
   h1 {
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-down(md) {
+      font-size: 1.8rem;
+    }
   }
 
   .woocommerce-result-count,
@@ -21,14 +59,39 @@
   .products {
     display: flex;
     justify-content: space-evenly;
+    flex-flow: row wrap;
+
+    &::before,
+    &::after {
+      display: none;
+    }
 
     .product {
-      margin-right: 0;
+      flex: 0 0 185px;
+      width: 100%;
+      margin: 1rem;
       text-align: center;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      padding-bottom: 3rem;
+
+      .woocommerce-LoopProduct-link {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .price {
+          margin-top: auto;
+        }
+      }
 
       img {
         transition: all 500ms ease;
+        overflow: hidden;
+        margin-bottom: 0;
 
         &:hover {
           transform: scale(1.1);
@@ -43,6 +106,10 @@
         color: $black;
         text-transform: uppercase;
         transition: all 250ms ease;
+        padding-top: 20px;
+        background-color: $white;
+        position: relative;
+        z-index: 5;
 
         .count {
           background-color: initial;
@@ -61,6 +128,7 @@
         text-transform: uppercase;
         font-size: 0.9rem;
         letter-spacing: 0.1rem;
+        padding: 0.618em 0em;
 
         &:hover {
           background-color: lighten($black, 30%);
@@ -74,6 +142,9 @@
       text-transform: uppercase;
       transition: all 250ms ease;
       letter-spacing: 0.05rem;
+      position: absolute;
+      bottom: 1rem;
+      align-self: center;
 
       &:hover {
         color: lighten($black, 60%);
@@ -219,6 +290,9 @@
 
     .checkout-button {
       background-color: $black;
+      @include media-breakpoint-down(md) {
+        margin: 0 4rem;
+      }
 
       &:hover {
         background-color: lighten($black, 30%);
@@ -394,9 +468,12 @@
   .woocommerce-order {
     .woocommerce-notice {
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
       margin-bottom: 5rem;
+      background-color: $light_grey;
+      position: relative;
+      padding: 2rem;
     }
 
     .woocommerce-order-details {

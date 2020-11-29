@@ -97,3 +97,11 @@ add_filter('gettext',
 
 		}, 
 20, 3);
+
+/**
+ * Replace the home link URL
+ */
+add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
+function woo_custom_breadrumb_home_url() {
+    return '/shop';
+}

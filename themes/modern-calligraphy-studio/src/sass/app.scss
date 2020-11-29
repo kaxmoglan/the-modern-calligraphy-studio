@@ -39,3 +39,16 @@ p {
     background-color: lighten($black, 20%);
   }
 }
+
+#nav-padding {
+  width: 100vw;
+
+  height: 45px;
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    &.active {
+      display: block;
+    }
+  }
+}
