@@ -143,6 +143,11 @@
         text-align: center;
       }
 
+      .woocommerce-form-row {
+        max-width: 275px;
+        margin: 1rem auto;
+      }
+
       .woocommerce-form-login__rememberme {
         display: block;
       }
@@ -191,6 +196,7 @@
       .woocommerce-privacy-policy-text {
         p {
           font-size: 0.75rem;
+          padding: 0 1rem;
 
           a {
             color: $black;

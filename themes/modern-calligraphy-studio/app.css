@@ -11491,6 +11491,7 @@ fieldset:disabled .btn {
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   padding: 0.1rem 2rem 0.1rem 0.5rem;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 #header-container #top-bar .search-pop-up .woocommerce-product-search .search-field:focus {
@@ -13020,12 +13021,18 @@ footer .end-credits a:hover {
 }
 
 #woocommerce-page-template .woocommerce-breadcrumb {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-align: center;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   color: #767676;
+}
+
+@media (max-width: 767.98px) {
+  #woocommerce-page-template .woocommerce-breadcrumb {
+    margin-top: 2rem;
+  }
 }
 
 #woocommerce-page-template .woocommerce-breadcrumb a {
@@ -13085,7 +13092,7 @@ footer .end-credits a:hover {
 }
 
 #woocommerce-page-template .products .product {
-  flex: 0 0 185px;
+  flex: 0 0 200px;
   width: 100%;
   margin: 1rem;
   text-align: center;
@@ -13105,6 +13112,10 @@ footer .end-credits a:hover {
 
 #woocommerce-page-template .products .product .woocommerce-LoopProduct-link .price {
   margin-top: auto;
+}
+
+#woocommerce-page-template .products .product .woocommerce-LoopProduct-link .star-rating {
+  display: none;
 }
 
 #woocommerce-page-template .products .product img {
@@ -13189,6 +13200,11 @@ footer .end-credits a:hover {
 #woocommerce-page-template .woocommerce-message a:hover,
 #woocommerce-page-template .woocommerce-info a:hover {
   color: #999999;
+}
+
+#woocommerce-page-template .woocommerce-message .restore-item,
+#woocommerce-page-template .woocommerce-info .restore-item {
+  text-transform: capitalize;
 }
 
 #woocommerce-page-template .woocommerce-message .button,
@@ -13544,6 +13560,10 @@ footer .end-credits a:hover {
   margin: 1rem 0;
 }
 
+#woocommerce-page-template #reviews #review_form_wrapper #commentform {
+  margin-top: 1rem;
+}
+
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
@@ -13700,6 +13720,11 @@ footer .end-credits a:hover {
   text-align: center;
 }
 
+#woocommerce-page-template #customer_login form .woocommerce-form-row {
+  max-width: 275px;
+  margin: 1rem auto;
+}
+
 #woocommerce-page-template #customer_login form .woocommerce-form-login__rememberme {
   display: block;
 }
@@ -13747,6 +13772,7 @@ footer .end-credits a:hover {
 
 #woocommerce-page-template #customer_login .woocommerce-form-register .woocommerce-privacy-policy-text p {
   font-size: 0.75rem;
+  padding: 0 1rem;
 }
 
 #woocommerce-page-template #customer_login .woocommerce-form-register .woocommerce-privacy-policy-text p a {
@@ -13825,5 +13851,14 @@ p {
   #nav-padding.active {
     display: block;
   }
+}
+
+a {
+  color: #000;
+  transition: all 250ms ease;
+}
+
+a:hover {
+  color: #999999;
 }
 

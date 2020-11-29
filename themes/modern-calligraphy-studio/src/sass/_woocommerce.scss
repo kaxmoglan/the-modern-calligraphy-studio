@@ -6,12 +6,16 @@
   }
 
   .woocommerce-breadcrumb {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
     text-transform: uppercase;
     font-size: 0.8rem;
     letter-spacing: 0.05rem;
     color: rgb(118, 118, 118);
+
+    @include media-breakpoint-down(md) {
+      margin-top: 2rem;
+    }
 
     a {
       transition: all 250ms ease;
@@ -67,7 +71,7 @@
     }
 
     .product {
-      flex: 0 0 185px;
+      flex: 0 0 200px;
       width: 100%;
       margin: 1rem;
       text-align: center;
@@ -85,6 +89,10 @@
 
         .price {
           margin-top: auto;
+        }
+
+        .star-rating {
+          display: none;
         }
       }
 
@@ -166,6 +174,9 @@
       &:hover {
         color: lighten($black, 60%);
       }
+    }
+    .restore-item {
+      text-transform: capitalize;
     }
 
     .button {
@@ -545,6 +556,14 @@
 
     .form-row {
       margin: 1rem 0;
+    }
+  }
+
+  #reviews {
+    #review_form_wrapper {
+      #commentform {
+        margin-top: 1rem;
+      }
     }
   }
 }

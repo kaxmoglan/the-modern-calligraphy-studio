@@ -76,8 +76,6 @@ wpBlockGroup.forEach((group) => {
   }
 });
 
-let mobileMenuOpen = false;
-
 // SUB MENUS
 parentMenus.forEach((menu) => {
   const link = menu.getElementsByTagName("a")[0];
@@ -127,6 +125,8 @@ window.onscroll = () => {
 };
 
 // SHOW/HIDE MOBILE MENU
+let mobileMenuOpen = false;
+
 mobileMenuBtn.addEventListener("click", () => {
   if (mobileMenuOpen) {
     // close menu
