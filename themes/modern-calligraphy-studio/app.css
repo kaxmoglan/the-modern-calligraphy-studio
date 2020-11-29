@@ -12952,6 +12952,11 @@ footer .end-credits a:hover {
   display: relative;
 }
 
+#wholesale-page .log-in__content hr {
+  width: 80%;
+  margin: 1.5rem auto;
+}
+
 #wholesale-page .log-in__content a {
   color: #000;
   text-decoration: none;

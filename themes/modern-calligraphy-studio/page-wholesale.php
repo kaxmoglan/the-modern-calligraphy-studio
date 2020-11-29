@@ -14,7 +14,7 @@
                 <?php
                     if ( !is_user_logged_in() ) { // Display WordPress login form:
                         $args = array(
-                            'redirect' => '/about', 
+                            'redirect' => '/shop', 
                             'form_id' => 'loginform-custom',
                             'label_username' => __( 'Username' ),
                             'label_password' => __( 'Password' ),
@@ -32,12 +32,28 @@
                 ?>
                         <p class="fs-5 mb-0">You are currently logged in as</p>
                         <p class="username fs-3">@<?php echo $current_user->display_name;?></p>
-                        <hr class="my-4">
-                        <div class="d-flex align-items-center justify-content-center logged-in-links">
-                            <a href="/about">TRADE SHOP</a> 
-                            <p> | </p>
-                            <?php wp_loginout( home_url() ); // Display "Log Out" link. ?>
-                        </div>
+                        <hr>
+
+                        <?php 
+                            $user = wp_get_current_user();
+                            $wholesale_customer = array( 'wholesale_customer');
+                            if ( !array_intersect( $wholesale_customer, $user->roles ) ) {
+                        ?>
+                                <div class="d-flex align-items-center flex-column justify-content-center logged-in-links">
+                                    <p class="mb-3 px-5">You are not currently logged in as a Wholesale Customer.</p>
+                                    <?php wp_loginout( home_url() ); // Display "Log Out" link. ?>
+                                </div>
+                        <?php
+                            } else {
+                        ?>
+                            <div class="d-flex align-items-center justify-content-center logged-in-links">
+                                <a href="/shop">TRADE SHOP</a> 
+                                <p> | </p>
+                                <?php wp_loginout( home_url() ); // Display "Log Out" link. ?>
+                            </div>
+                        <?php
+                            }
+                        ?>
                       
                 <?php } ?>
                         
