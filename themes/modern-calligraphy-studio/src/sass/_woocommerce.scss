@@ -558,12 +558,28 @@
       margin: 1rem 0;
     }
   }
-
-  #reviews {
-    #review_form_wrapper {
-      #commentform {
-        margin-top: 1rem;
+  .woocommerce-tabs {
+    h2 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1rem;
+    }
+    #reviews {
+      #review_form_wrapper {
+        #commentform {
+          margin-top: 1rem;
+        }
       }
+    }
+  }
+
+  .related {
+    h2:first-child {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 0.1rem;
     }
   }
 }

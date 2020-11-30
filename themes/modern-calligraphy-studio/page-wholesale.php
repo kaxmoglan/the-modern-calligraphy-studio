@@ -41,7 +41,11 @@
                         ?>
                                 <div class="d-flex align-items-center flex-column justify-content-center logged-in-links">
                                     <p class="mb-3 px-5">You are not currently logged in as a Wholesale Customer.</p>
-                                    <?php wp_loginout( home_url() ); // Display "Log Out" link. ?>
+                                    <div class="d-flex">
+                                        <a href="/shop">SHOP</a> 
+                                        <p> | </p>
+                                        <?php wp_loginout( home_url() ); // Display "Log Out" link. ?>
+                                    </div>
                                 </div>
                         <?php
                             } else {

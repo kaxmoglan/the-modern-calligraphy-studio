@@ -17,7 +17,7 @@
   <div id="header-container" class="main-width container-fluid">
     <div id="top-bar" class="container-fluid d-flex align-items-center justify-content-between">
 
-      <!-- SOCIAL -->
+      <!-- SOCIAL ICONS -->
       <div class="contact__social d-flex justify-content-center">
         <a href="https://www.etsy.com/uk/shop/ModernCalligraphyUK" target="_blank">
           <i class="fab fa-etsy"></i>
@@ -39,7 +39,7 @@
         </a>		
       </div>
 
-      <!-- ACCOUNT & CART -->
+      <!-- RIGHT SIDE ICONS -->
       <ul class="shop-icons d-flex">
         <li id="search-btn">
           <i class="fas fa-search"></i>

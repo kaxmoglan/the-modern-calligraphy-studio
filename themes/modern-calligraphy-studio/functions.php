@@ -98,6 +98,13 @@
       }, 
   20, 3);
 
+  add_filter( 'wc_add_to_cart_message_html', 'custom_add_to_cart_message' );
+ 
+  function custom_add_to_cart_message() {
+    $message = 'Item added to basket. <a href="/basket"><i class="fas fa-shopping-basket"></i></a>' ;
+    return $message;
+  }
+
   /*
     Replace the home link URL
   */

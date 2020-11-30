@@ -17,6 +17,7 @@ const navPadding = document.querySelector("#nav-padding");
 let searchBoxOpen = false;
 
 const openSearchBox = () => {
+  searchInput.value = "";
   searchBox.classList.add("open");
   searchBoxOpen = true;
   searchInput.focus();
@@ -38,11 +39,9 @@ const handleSearchBox = () => {
 window.addEventListener("click", (e) => {
   if (searchBtn.contains(e.target)) {
     handleSearchBox();
-  } else {
-    if (searchBoxOpen) {
-      e.preventDefault();
-      closeSearchBox();
-    }
+  } else if (searchBoxOpen && !searchBox.contains(e.target)) {
+    e.preventDefault();
+    closeSearchBox();
   }
 });
 

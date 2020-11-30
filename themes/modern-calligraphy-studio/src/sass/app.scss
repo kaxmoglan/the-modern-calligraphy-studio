@@ -61,3 +61,23 @@ a {
     color: lighten($black, 60%);
   }
 }
+
+// WOOCOMMERCE STORE NOTICE
+.woocommerce-store-notice,
+p.demo_store {
+  top: 30px;
+  background-color: $light_grey;
+  color: $black;
+  box-shadow: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  a {
+    color: $black;
+    transition: all 250ms ease;
+
+    &:hover {
+      color: lighten($black, 60%);
+    }
+  }
+}

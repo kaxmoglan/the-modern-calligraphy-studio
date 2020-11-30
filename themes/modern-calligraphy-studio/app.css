@@ -13565,8 +13565,24 @@ footer .end-credits a:hover {
   margin: 1rem 0;
 }
 
-#woocommerce-page-template #reviews #review_form_wrapper #commentform {
+#woocommerce-page-template .woocommerce-tabs h2,
+#woocommerce-page-template .woocommerce-tabs .h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+}
+
+#woocommerce-page-template .woocommerce-tabs #reviews #review_form_wrapper #commentform {
   margin-top: 1rem;
+}
+
+#woocommerce-page-template .related h2:first-child,
+#woocommerce-page-template .related .h2:first-child {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
 }
 
 .woocommerce #respond input#submit,
@@ -13864,6 +13880,27 @@ a {
 }
 
 a:hover {
+  color: #999999;
+}
+
+.woocommerce-store-notice,
+p.demo_store {
+  top: 30px;
+  background-color: #f9f9f9;
+  color: #000;
+  box-shadow: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.woocommerce-store-notice a,
+p.demo_store a {
+  color: #000;
+  transition: all 250ms ease;
+}
+
+.woocommerce-store-notice a:hover,
+p.demo_store a:hover {
   color: #999999;
 }
 
