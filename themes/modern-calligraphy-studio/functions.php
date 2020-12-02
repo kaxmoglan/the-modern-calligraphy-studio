@@ -84,8 +84,14 @@
             case 'Update cart':
               $translated_text = __('Update basket', 'woocommerce');
               break;
+            case 'Your cart is currently empty.':
+              $translated_text = __('Your basket is currently empty.', 'woocommerce');
+              break;
             case 'Add to cart':
               $translated_text = __('Add to basket', 'woocommerce');
+              break;
+            case 'Cart updated.':
+              $translated_text = __('Basket updated.', 'woocommerce');
               break;
             case 'View cart':
               $translated_text = __('View basket', 'woocommerce');
@@ -98,8 +104,8 @@
       }, 
   20, 3);
 
-  add_filter( 'wc_add_to_cart_message_html', 'custom_add_to_cart_message' );
- 
+  // ADD TO CART MESSAGE
+  add_filter( 'wc_add_to_cart_message_html', 'custom_add_to_cart_message' ); 
   function custom_add_to_cart_message() {
     $message = 'Item added to basket. <a href="/basket"><i class="fas fa-shopping-basket"></i></a>' ;
     return $message;

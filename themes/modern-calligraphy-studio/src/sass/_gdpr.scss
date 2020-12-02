@@ -1,0 +1,15 @@
+#cookie-law-info-bar {
+  padding: 1rem !important;
+  z-index: 1999 !important;
+
+  .cli-bar-btn_container {
+    #cookie_action_close_header {
+      background-color: $black !important;
+      transition: all 250ms ease;
+
+      &:hover {
+        background-color: lighten($black, 30%) !important;
+      }
+    }
+  }
+}

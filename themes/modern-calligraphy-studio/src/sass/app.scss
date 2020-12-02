@@ -10,6 +10,7 @@
 @import "wholesale";
 @import "woocommerce";
 @import "my_account";
+@import "gdpr";
 
 body {
   font-family: "Lato", sans-serif;
@@ -79,5 +80,15 @@ p.demo_store {
     &:hover {
       color: lighten($black, 60%);
     }
+  }
+}
+
+// DISABLE LOADER ON SPECIFIC PAGES
+.woocommerce-account,
+.woocommerce-orders,
+.woocommerce-edit-address,
+.woocommerce-edit-account {
+  #loading-screen {
+    display: none;
   }
 }

@@ -14,10 +14,10 @@
         </h4>
         <div class="links__content d-flex flex-column">
           <a href="#" data-toggle="modal" data-target="#suggestionsBox">SUGGESTIONS BOX</a>
-          <a href="#">PRIVACY POLICY</a>
-          <a href="#">TERMS & CONDITIONS</a>
-          <a href="#">RETURNS POLICY</a>
-          <a href="#">SHIPPING</a>
+          <a href="/privacy">PRIVACY POLICY</a>
+          <a href="/terms">TERMS & CONDITIONS</a>
+          <a href="/returns">RETURNS POLICY</a>
+          <a href="/shipping">SHIPPING</a>
           <a href="/my-account">MY ACCOUNT</a>
           <a href="/basket">BASKET</a>
           <?php 

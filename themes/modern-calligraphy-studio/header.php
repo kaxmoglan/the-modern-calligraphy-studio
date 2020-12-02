@@ -9,10 +9,43 @@
   <title>The Modern Calligraphy Studio</title>
 
   <?php wp_head(); ?>
+    <style>
+      #loading-screen {
+      height: 100vh;
+      width: 100vw;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2000;
+      opacity: 1;
+      transition: all 500ms ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      }
+
+      #loading-screen p {
+        font-size: 2rem;
+      }
+
+      #loading-screen.transition {
+        opacity: 0;
+      }
+
+      #loading-screen.finished-loading {
+        display: none !important;
+      }
+  </style>
 </head>
 
 
+
 <body <?php body_class(); ?>>
+
+  <div id="loading-screen">
+    <p>LOADING...</p>
+  </div>
 
   <div id="header-container" class="main-width container-fluid">
     <div id="top-bar" class="container-fluid d-flex align-items-center justify-content-between">
