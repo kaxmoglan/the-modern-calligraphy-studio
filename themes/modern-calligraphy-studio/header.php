@@ -10,6 +10,9 @@
 
   <?php wp_head(); ?>
     <style>
+      body {
+        overflow: hidden;
+      }
       #loading-screen {
       height: 100vh;
       width: 100vw;
@@ -25,6 +28,14 @@
       justify-content: center;
       }
 
+      #loading-screen video {
+        z-index: 2001;
+        width: 450px;
+        height: 450px;
+        max-width: 100%;
+        animation: loader-animation 3s;
+      }
+
       #loading-screen p {
         font-size: 2rem;
       }
@@ -36,15 +47,22 @@
       #loading-screen.finished-loading {
         display: none !important;
       }
+
+      @keyframes loader-animation {
+        0% {opacity: 0; transform: scale(0.9);}
+        50% {opacity: 1;}
+        100% {transform: scale(1)}
+      }
   </style>
 </head>
-
-
 
 <body <?php body_class(); ?>>
 
   <div id="loading-screen">
-    <p>LOADING...</p>
+    <video autoplay muted height="512" width='512'>
+      <source src="<?php bloginfo('stylesheet_directory');?>/images/loader.mp4" />
+      <img src="<?php bloginfo('stylesheet_directory');?>/images/logo.jpg" />
+    </video>
   </div>
 
   <div id="header-container" class="main-width container-fluid">

@@ -268,14 +268,18 @@ class SB_Instagram_Parse
 		} elseif ( ! empty( $header_data['local_avatar'] ) ) {
 			return $header_data['local_avatar'];
 		} else {
-			if ( isset( $header_data['profile_picture'] ) ) {
-				return $header_data['profile_picture'];
-			} elseif ( isset( $header_data['profile_picture_url'] ) ) {
-				return $header_data['profile_picture_url'];
-			} elseif ( isset( $header_data['user'] ) ) {
-				return $header_data['user']['profile_picture'];
-			} elseif ( isset( $header_data['data'] ) ) {
-				return $header_data['data']['profile_picture'];
+			if ( ! SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
+				if ( isset( $header_data['profile_picture'] ) ) {
+					return $header_data['profile_picture'];
+				} elseif ( isset( $header_data['profile_picture_url'] ) ) {
+					return $header_data['profile_picture_url'];
+				} elseif ( isset( $header_data['user'] ) ) {
+					return $header_data['user']['profile_picture'];
+				} elseif ( isset( $header_data['data'] ) ) {
+					return $header_data['data']['profile_picture'];
+				}
+			} else {
+				return trailingslashit( SBI_PLUGIN_URL ) . 'img/thumb-placeholder.png';
 			}
 		}
 

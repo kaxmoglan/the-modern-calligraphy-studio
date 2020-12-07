@@ -83,12 +83,26 @@ p.demo_store {
   }
 }
 
-// DISABLE LOADER ON SPECIFIC PAGES
-.woocommerce-account,
-.woocommerce-orders,
-.woocommerce-edit-address,
-.woocommerce-edit-account {
+// DISABLE LOADER ON WOOCOMMERCE PAGES
+.woocommerce-page {
+  overflow-y: scroll;
+
   #loading-screen {
     display: none;
+  }
+}
+
+// INSTAGRAM FEED
+#sb_instagram {
+  #sbi_images {
+    .sbi_photo_wrap {
+      overflow: hidden;
+      .sbi_photo {
+        transition: all 500ms ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }

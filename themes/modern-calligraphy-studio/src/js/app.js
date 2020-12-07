@@ -13,16 +13,18 @@ const searchBox = document.querySelector(".search-pop-up");
 const searchInput = document.querySelector(".search-field");
 const navPadding = document.querySelector("#nav-padding");
 const loadingScreen = document.querySelector("#loading-screen");
+const body = document.querySelector("body");
 
 // LOADING SCREEN
 window.addEventListener("load", () => {
   setTimeout(() => {
     loadingScreen.classList.add("transition");
-  }, 500);
+    body.style.overflowY = "scroll";
+  }, 1000);
 
   setTimeout(() => {
     loadingScreen.classList.add("finished-loading");
-  }, 1000);
+  }, 1500);
 });
 
 // SEARCH BOX POP UP

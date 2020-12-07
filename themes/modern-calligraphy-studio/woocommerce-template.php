@@ -21,7 +21,7 @@
       <?php woocommerce_breadcrumb( $args ); ?>
     <?php the_content(); ?>
   </div>
-  
+
 </div>
 
 <?php get_footer(); ?>

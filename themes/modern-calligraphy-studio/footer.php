@@ -12,20 +12,37 @@
         <h4>
           LINKS
         </h4>
-        <div class="links__content d-flex flex-column">
-          <a href="#" data-toggle="modal" data-target="#suggestionsBox">SUGGESTIONS BOX</a>
-          <a href="/privacy">PRIVACY POLICY</a>
-          <a href="/terms">TERMS & CONDITIONS</a>
-          <a href="/returns">RETURNS POLICY</a>
-          <a href="/shipping">SHIPPING</a>
-          <a href="/my-account">MY ACCOUNT</a>
-          <a href="/basket">BASKET</a>
+        <ul class="links__content d-flex flex-column">
+          <li>
+              <a href="#" data-toggle="modal" data-target="#suggestionsBox">SUGGESTIONS BOX</a>
+          </li>  
+          <li>
+            <a href="/privacy">PRIVACY POLICY</a>
+          </li>
+          <li>
+            <a href="/terms">TERMS & CONDITIONS</a>
+          </li>
+          <li>
+            <a href="/returns">RETURNS POLICY</a>
+          </li>
+          <li>
+            <a href="/shipping">SHIPPING</a>
+          </li>
+          <li>
+            <a href="/my-account">MY ACCOUNT</a>
+          </li>
+          <li>
+            <a href="/basket">BASKET</a>
+          </li>
           <?php 
             if ( is_user_logged_in() ) {
-              wp_loginout( home_url() );
+          ?> <li>
+            <?php wp_loginout( home_url() ); ?>
+          </li>
+          <?php  
             }
           ?>
-        </div>
+        </ul>
       </div>
       
       <div class="col-md-4 contact">

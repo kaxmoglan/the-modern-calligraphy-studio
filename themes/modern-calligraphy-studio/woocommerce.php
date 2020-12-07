@@ -15,7 +15,11 @@
 
     <?php woocommerce_content(); ?>
   </div>
-  
+
+</div>
+
+<div id="suggestion-container" class="d-flex align-items-center justify-content-center mb-3 fs-6">
+    <a href="#" data-toggle="modal" data-target="#suggestionsBox">Can't find what you're looking for?</a>
 </div>
 
 <?php get_footer(); ?>
