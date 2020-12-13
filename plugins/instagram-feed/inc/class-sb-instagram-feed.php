@@ -1087,6 +1087,9 @@ class SB_Instagram_Feed
 		}
 		if ( SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
 			$flags[] = 'gdpr';
+			if ( ! SB_Instagram_GDPR_Integrations::blocking_cdn( $settings ) ) {
+				$flags[] = 'overrideBlockCDN';
+			}
 		}
 		if ( isset( $_GET['sbi_debug'] ) ) {
 			$flags[] = 'debug';

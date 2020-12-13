@@ -268,7 +268,14 @@ class SB_Instagram_Parse
 		} elseif ( ! empty( $header_data['local_avatar'] ) ) {
 			return $header_data['local_avatar'];
 		} else {
-			if ( ! SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
+			$use_cdn = true;
+			if ( SB_Instagram_GDPR_Integrations::doing_gdpr( $settings ) ) {
+				$use_cdn = false;
+				if ( ! SB_Instagram_GDPR_Integrations::blocking_cdn( $settings ) ) {
+					$use_cdn = true;
+				}
+			}
+			if ( $use_cdn ) {
 				if ( isset( $header_data['profile_picture'] ) ) {
 					return $header_data['profile_picture'];
 				} elseif ( isset( $header_data['profile_picture_url'] ) ) {

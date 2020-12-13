@@ -490,6 +490,22 @@ function sbi_debug_report( $instagram_feed, $feed_id ) {
 
         <?php endif; endforeach; ?>
     </ul>
+    <p>GDPR</p>
+    <ul>
+		<?php
+        $statuses = SB_Instagram_GDPR_Integrations::statuses();
+        foreach ( $statuses as $status_key => $value) : ?>
+            <li>
+                <small><?php echo esc_html( $status_key ); ?>:</small>
+				<?php if ( $value == 1 ) { echo 'success'; } else {  echo 'failed'; } ?>
+            </li>
+
+		<?php endforeach; ?>
+        <li>
+            <small>Enabled:</small>
+		    <?php echo SB_Instagram_GDPR_Integrations::doing_gdpr( $database_settings ); ?>
+        </li>
+    </ul>
     <?php
 }
 add_action( 'sbi_before_feed_end', 'sbi_debug_report', 11, 2 );

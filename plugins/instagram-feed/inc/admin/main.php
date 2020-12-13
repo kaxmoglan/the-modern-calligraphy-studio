@@ -2285,7 +2285,7 @@ function sb_instagram_settings_page() {
                             </div>
                         </div>
 
-						<?php if ( ! SB_Instagram_GDPR_Integrations::gdpr_tests_successful() ) :
+	                    <?php if ( ! SB_Instagram_GDPR_Integrations::gdpr_tests_successful( isset( $_GET['retest'] ) ) ) :
 							$errors = SB_Instagram_GDPR_Integrations::gdpr_tests_error_message();
 							?>
                             <div class="sb_instagram_box sbi_gdpr_error">

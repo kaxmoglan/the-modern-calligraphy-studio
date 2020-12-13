@@ -197,6 +197,7 @@ if(!sbi_js_exists) {
                             favorLocal : (flags.indexOf('favorLocal') > -1),
                             ajaxPostLoad : (flags.indexOf('ajaxPostLoad') > -1),
                             gdpr : (flags.indexOf('gdpr') > -1),
+                            overrideBlockCDN : (flags.indexOf('overrideBlockCDN') > -1),
                             consentGiven : false,
                             autoMinRes : 1,
                             general : general
@@ -799,7 +800,7 @@ if(!sbi_js_exists) {
             getImageUrls: function ($item) {
                 var srcSet = JSON.parse($item.find('.sbi_photo').attr('data-img-src-set').replace(/\\\//g, '/')),
                     id = $item.attr('id').replace('sbi_', '');
-                if (!this.settings.consentGiven) {
+                if (!this.settings.consentGiven && !this.settings.overrideBlockCDN) {
                     srcSet = [];
                 }
                 if (typeof this.resizedImages[id] !== 'undefined'
