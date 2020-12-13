@@ -83,8 +83,11 @@
             <div class="sign-up__border-bottom"></div>
             <div class="sign-up__border-left"></div>
 
-            <figure class="flourish wp-block-image size-large"><img src="http://themoderncalligraphystudio.local/wp-content/uploads/2020/11/Asset-4.svg" alt="" class="img-fluid wp-image-114"></figure>
-            <figure class="flourish wp-block-image size-large"><img src="http://themoderncalligraphystudio.local/wp-content/uploads/2020/11/Asset-4.svg" alt="" class="img-fluid wp-image-114"></figure>
+            <figure class="flourish wp-block-image size-large"><img src="<?php bloginfo('stylesheet_directory');?>/images/flourish.svg" class="img-fluid"/></figure>
+            <figure class="flourish wp-block-image size-large"><img src="<?php bloginfo('stylesheet_directory');?>/images/flourish.svg" class="img-fluid"/></figure>
+
+            
+            
             
         </div>
 

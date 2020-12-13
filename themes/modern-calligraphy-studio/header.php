@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Modern Calligraphy Studio in Winchester, Hampshire, UK. Greetings cards, digitisiation, spot calligraphy, calligraphy workshops, personalised gifts, hampshire calligrapher.">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
   
@@ -111,13 +112,15 @@
 
       <!-- SEARCH BOX POP UP -->
       <div class="search-pop-up">
-        
-        <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
+      <form role="search" method="get" class="woocommerce-product-search" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
           <label class="screen-reader-text" for="s"><?php _e( 'Search for:', 'woocommerce' ); ?></label>
           <input type="search" class="search-field" placeholder="<?php echo esc_attr_x( 'Search Products&hellip;', 'placeholder', 'woocommerce' ); ?>" value="<?php echo get_search_query(); ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label', 'woocommerce' ); ?>" />
           <button type="submit"><i class="fas fa-search"></i></button>
           <input type="hidden" name="post_type" value="product" />
+          <input type="hidden" name="type_aws" value="true">
         </form>
+         
+       
       </div>
     </div>
 
