@@ -66,19 +66,22 @@ a {
 // WOOCOMMERCE STORE NOTICE
 .woocommerce-store-notice,
 p.demo_store {
+  z-index: 1999;
   top: 30px;
-  background-color: $light_grey;
-  color: $black;
+  background-color: $black;
+  color: $white;
   box-shadow: none;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  padding: 5px 0;
+  font-size: 0.8rem;
 
   a {
-    color: $black;
+    color: $white;
     transition: all 250ms ease;
 
     &:hover {
-      color: lighten($black, 60%);
+      color: darken($white, 15%);
     }
   }
 }
