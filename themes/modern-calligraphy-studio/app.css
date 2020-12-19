@@ -13392,12 +13392,24 @@ footer .end-credits a:hover {
   margin-bottom: 2rem;
 }
 
-#woocommerce-page-template .product .cart {
-  display: flex;
-  align-items: center;
+#woocommerce-page-template .product .cart #alg-product-input-fields-table td {
+  display: block;
+}
+
+#woocommerce-page-template .product .cart #alg-product-input-fields-table td label {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: bold;
+  letter-spacing: 0.03rem;
+}
+
+#woocommerce-page-template .product .cart #alg-product-input-fields-table td input {
+  margin-bottom: 2rem;
+  padding: 0 5px;
 }
 
 #woocommerce-page-template .product .cart .button {
+  width: 150px;
   background-color: #000;
   transition: all 250ms ease;
   margin-left: 0.5rem;
@@ -13906,12 +13918,12 @@ h3,
 h4,
 .h4 {
   font-size: 2.2rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
 }
 
 p {
   font-size: 0.9rem;
-  letter-spacing: 0.05rem;
+  letter-spacing: 0.03rem;
 }
 
 .bg-light-grey {

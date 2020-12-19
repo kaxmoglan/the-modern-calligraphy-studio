@@ -51,8 +51,8 @@
   // DECLARE WOOCOMMERCE SUPPORT
   function mytheme_add_woocommerce_support() {
     add_theme_support( 'woocommerce', array(
-        'thumbnail_image_width' => 150,
-        'single_image_width'    => 300,
+        'thumbnail_image_width' => 512,
+        'single_image_width'    => 1024,
 
         'product_grid'          => array(
             'default_rows'    => 3,
@@ -70,6 +70,16 @@
   add_theme_support( 'wc-product-gallery-zoom' );
   add_theme_support( 'wc-product-gallery-lightbox' );
   add_theme_support( 'wc-product-gallery-slider' );
+
+  // WOOCOMMERCE PRODUCT GALLERY THUMBNAIL SIZES
+  add_filter( 'woocommerce_get_image_size_gallery_thumbnail', 'cg_woocommerce_image_size_gallery_thumbnail', 99 );
+  function cg_woocommerce_image_size_gallery_thumbnail( $size ) {
+    return array(
+        'width'  => 512,
+        'height' => 512,
+        'crop'   => 0,
+    );
+  }
 
   // LET'S BRITISH THIS STORE UP YEH?
   add_filter('gettext', 
