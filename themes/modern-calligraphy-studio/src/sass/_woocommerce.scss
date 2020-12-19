@@ -137,6 +137,8 @@
         font-size: 0.9rem;
         letter-spacing: 0.05rem;
         padding: 0.618em 0em;
+        width: 190px;
+        align-self: center;
 
         &:hover {
           background-color: lighten($black, 30%);

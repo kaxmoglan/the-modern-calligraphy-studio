@@ -121,12 +121,16 @@
     return $message;
   }
 
-  /*
-    Replace the home link URL
-  */
+  // REPLACE BREADCRUMB HOME LINK TO /SHOP
   add_filter( 'woocommerce_breadcrumb_home_url', 'woo_custom_breadrumb_home_url' );
   function woo_custom_breadrumb_home_url() {
       return '/shop';
   }
 
-?>
+  
+  // REMOVE 'DISMISS' FROM STORE NOTICE
+add_filter('woocommerce_demo_store', 'removeDismissMessageFromStoreBanner', 2, 99);
+
+function removeDismissMessageFromStoreBanner($notice_with_dismiss_message, $notice_without_dismiss_message) {
+	echo '<p class="woocommerce-store-notice demo_store">' . wp_kses_post( $notice_without_dismiss_message ) . '</p>';
+}

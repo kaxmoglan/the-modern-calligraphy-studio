@@ -9,6 +9,8 @@
     background-color: $light_grey;
     height: 30px;
     position: relative;
+    z-index: 2000;
+    // top: 30px;
 
     .shop-icons {
       list-style: none;

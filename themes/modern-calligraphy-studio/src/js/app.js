@@ -14,6 +14,15 @@ const searchInput = document.querySelector(".search-field");
 const navPadding = document.querySelector("#nav-padding");
 const loadingScreen = document.querySelector("#loading-screen");
 const body = document.querySelector("body");
+const headerContainer = document.querySelector("#header-container");
+const storeNotice = document.querySelector(".woocommerce-store-notice");
+const topBar = document.querySelector("#top-bar");
+const header = document.querySelector("#header");
+
+// RE-ORDER HEADER COMPONENTS FOR STORE NOTICE STYLING
+headerContainer.appendChild(storeNotice);
+headerContainer.appendChild(topBar);
+headerContainer.appendChild(header);
 
 // LOADING SCREEN
 window.addEventListener("load", () => {
