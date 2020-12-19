@@ -127,6 +127,13 @@
       return '/shop';
   }
 
+  // CHANGE BREADCRUMB HOME TEXT
+  add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text' );
+  function wcc_change_breadcrumb_home_text( $defaults ) {
+    $defaults['home'] = 'shop home';
+    return $defaults;
+  }
+
   
   // REMOVE 'DISMISS' FROM STORE NOTICE
 add_filter('woocommerce_demo_store', 'removeDismissMessageFromStoreBanner', 2, 99);
