@@ -71,9 +71,9 @@
     }
 
     .product {
-      flex: 0 0 200px;
+      flex: 0 0 250px;
       width: 100%;
-      margin: 1rem;
+      margin: 10px;
       text-align: center;
       overflow: hidden;
       display: flex;
@@ -135,7 +135,7 @@
         transition: all 250ms ease;
         text-transform: uppercase;
         font-size: 0.9rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.05rem;
         padding: 0.618em 0em;
 
         &:hover {
