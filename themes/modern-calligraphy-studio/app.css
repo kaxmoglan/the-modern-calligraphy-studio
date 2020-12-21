@@ -11518,7 +11518,7 @@ fieldset:disabled .btn {
 }
 
 #header-container #logo-container {
-  margin: 3rem 0 2rem 0;
+  margin: 2rem 0 2rem 0;
 }
 
 #header-container #logo-container img {
@@ -12789,6 +12789,18 @@ footer .end-credits a:hover {
   color: inherit;
 }
 
+#default-page-template .spot-galligraphy-gallery figure {
+  overflow: hidden;
+}
+
+#default-page-template .spot-galligraphy-gallery img {
+  transition: all 500ms ease;
+}
+
+#default-page-template .spot-galligraphy-gallery img:hover {
+  transform: scale(1.1);
+}
+
 .contact hr {
   width: 60%;
   margin: 1rem auto;
@@ -12856,6 +12868,17 @@ footer .end-credits a:hover {
 #page-404 h1,
 #page-404 .h1 {
   letter-spacing: 0.1rem;
+}
+
+#wholesale-page .login-msg__container {
+  background-color: #000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#wholesale-page .login-msg__container .login-msg {
+  color: #fff;
+  margin-bottom: 0;
 }
 
 #wholesale-page #drop-email {
@@ -13619,6 +13642,10 @@ footer .end-credits a:hover {
   margin: 1rem 0;
 }
 
+#woocommerce-page-template .woocommerce-tabs .tabs {
+  display: none;
+}
+
 #woocommerce-page-template .woocommerce-tabs h2,
 #woocommerce-page-template .woocommerce-tabs .h2 {
   font-size: 1.8rem;
@@ -13629,6 +13656,10 @@ footer .end-credits a:hover {
 
 #woocommerce-page-template .woocommerce-tabs #reviews #review_form_wrapper #commentform {
   margin-top: 1rem;
+}
+
+#woocommerce-page-template .related {
+  margin-top: 7rem;
 }
 
 #woocommerce-page-template .related h2:first-child,

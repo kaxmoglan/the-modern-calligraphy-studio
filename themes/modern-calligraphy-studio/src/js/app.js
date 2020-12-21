@@ -133,8 +133,8 @@ parentMenus.forEach((menu) => {
 window.onscroll = () => {
   "use strict";
   if (
-    document.body.scrollTop >= 260 ||
-    document.documentElement.scrollTop >= 260
+    document.body.scrollTop >= 292 ||
+    document.documentElement.scrollTop >= 292
   ) {
     navbar.classList.add("full-width");
     mobileMenu.classList.add("fix");

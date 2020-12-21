@@ -1,11 +1,33 @@
 <?php get_header(); ?>
 
+<?php 
+    // CHECK IF $LOGIN CONTAINS VALUE. IF NOT, $LOGIN = 0
+    $login  = (isset($_GET['login']) ) ? $_GET['login'] : 0; 
+?>
+
 <div id="nav-padding"></div>
 
 <div id="wholesale-page" class="container mb-5">
     <div class="row mt-5">
         <h1 class="text-center">WHOLESALE</h1>
     </div>
+    <?php if ( $login !== 0 ) { ?>
+        <div class="login-msg__container row py-2 mt-3">
+            <p class="login-msg text-center"><strong class="error">ERROR: </strong>
+                <?php
+                    // SHOW ERRORS BASED ON VALUE OF ERROR
+                    if ( $login === "failed" ) {
+                        echo 'INVALID USERNAME OR PASSWORD.';
+                    } elseif ( $login === "empty" ) {
+                        echo 'USERNAME OR PASSWORD EMPTY.';
+                    } elseif ( $login === "false" ) {
+                        echo 'YOU ARE NOT CURRENTLY LOGGED IN.';
+                    }
+                ?>
+            </p>
+        </div>
+    <?php } ?>
+    
     <div class="row mt-5 justify-content-center">
 
         <div class="col-xl-5 col-md-6 order-md-2 position-relative d-flex align-items-center justify-content-center log-in">

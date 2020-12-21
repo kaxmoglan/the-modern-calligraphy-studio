@@ -86,28 +86,28 @@
         
         function ($translated_text, $text, $domain) {
 
-        if ($domain == 'woocommerce') {
-          switch ($translated_text) {
-            case 'Cart totals':
-              $translated_text = __('Order summary', 'woocommerce');
-              break;
-            case 'Update cart':
-              $translated_text = __('Update basket', 'woocommerce');
-              break;
-            case 'Your cart is currently empty.':
-              $translated_text = __('Your basket is currently empty.', 'woocommerce');
-              break;
-            case 'Add to cart':
-              $translated_text = __('Add to basket', 'woocommerce');
-              break;
-            case 'Cart updated.':
-              $translated_text = __('Basket updated.', 'woocommerce');
-              break;
-            case 'View cart':
-              $translated_text = __('View basket', 'woocommerce');
-              break;
+          if ($domain == 'woocommerce') {
+            switch ($translated_text) {
+              case 'Cart totals':
+                $translated_text = __('Order summary', 'woocommerce');
+                break;
+              case 'Update cart':
+                $translated_text = __('Update basket', 'woocommerce');
+                break;
+              case 'Your cart is currently empty.':
+                $translated_text = __('Your basket is currently empty.', 'woocommerce');
+                break;
+              case 'Add to cart':
+                $translated_text = __('Add to basket', 'woocommerce');
+                break;
+              case 'Cart updated.':
+                $translated_text = __('Basket updated.', 'woocommerce');
+                break;
+              case 'View cart':
+                $translated_text = __('View basket', 'woocommerce');
+                break;
+            }
           }
-        }
 
         return $translated_text;
 
@@ -141,3 +141,20 @@ add_filter('woocommerce_demo_store', 'removeDismissMessageFromStoreBanner', 2, 9
 function removeDismissMessageFromStoreBanner($notice_with_dismiss_message, $notice_without_dismiss_message) {
 	echo '<p class="woocommerce-store-notice demo_store">' . wp_kses_post( $notice_without_dismiss_message ) . '</p>';
 }
+
+// STOP REDIRECT ON LOGIN ERROR ON WHOLESALE PAGE
+function login_failed() {
+  $login_page  = home_url( '/wholesale/' );
+  wp_redirect( $login_page . '?login=failed' );
+  exit;
+}
+add_action( 'wp_login_failed', 'login_failed' );
+ 
+function verify_username_password( $user, $username, $password ) {
+  $login_page  = home_url( '/wholesale/' );
+    if( $username == "" || $password == "" ) {
+        wp_redirect( $login_page . "?login=empty" );
+        exit;
+    }
+}
+add_filter( 'authenticate', 'verify_username_password', 1, 3);

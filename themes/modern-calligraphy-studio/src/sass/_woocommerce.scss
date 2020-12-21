@@ -578,6 +578,9 @@
     }
   }
   .woocommerce-tabs {
+    .tabs {
+      display: none;
+    }
     h2 {
       font-size: 1.8rem;
       text-transform: uppercase;
@@ -594,6 +597,8 @@
   }
 
   .related {
+    margin-top: 7rem;
+
     h2:first-child {
       font-size: 1.8rem;
       text-transform: uppercase;

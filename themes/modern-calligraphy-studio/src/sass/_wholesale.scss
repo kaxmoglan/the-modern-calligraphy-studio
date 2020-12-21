@@ -1,4 +1,13 @@
 #wholesale-page {
+  .login-msg__container {
+    background-color: $black;
+    margin-left: auto;
+    margin-right: auto;
+    .login-msg {
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
   #drop-email {
     color: inherit;
     transition: all 250ms ease;
