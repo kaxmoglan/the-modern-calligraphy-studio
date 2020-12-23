@@ -14011,6 +14011,7 @@ p.demo_store {
   border-bottom: 1px solid black;
   padding: 5px 0;
   font-size: 0.8rem;
+  letter-spacing: 0.05rem;
 }
 
 .woocommerce-store-notice a,
