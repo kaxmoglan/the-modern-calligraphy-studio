@@ -12684,6 +12684,8 @@ footer .end-credits a:hover {
 #suggestionsBox form p {
   width: 352px;
   max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #suggestionsBox form p label {

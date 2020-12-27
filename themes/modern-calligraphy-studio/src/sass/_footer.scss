@@ -151,6 +151,8 @@ footer {
     p {
       width: 352px;
       max-width: 100%;
+      display: flex;
+      justify-content: center;
 
       label {
         max-width: 100%;
