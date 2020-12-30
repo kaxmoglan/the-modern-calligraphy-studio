@@ -15,18 +15,18 @@
         overflow: hidden;
       }
       #loading-screen {
-      height: 100vh;
-      width: 100vw;
-      background-color: white;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 2000;
-      opacity: 1;
-      transition: all 500ms ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        opacity: 1;
+        transition: all 500ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       #loading-screen video {
@@ -70,7 +70,7 @@
 <body <?php body_class(); ?>>
 
   <div id="loading-screen">
-    <video autoplay muted height="512" width='512'>
+    <video autoplay muted playsinline height="512" width='512'>
       <source src="<?php bloginfo('stylesheet_directory');?>/images/loader.mp4" />
       <img src="<?php bloginfo('stylesheet_directory');?>/images/logo.jpg" />
     </video>
