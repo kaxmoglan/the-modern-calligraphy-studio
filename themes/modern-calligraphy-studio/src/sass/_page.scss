@@ -27,6 +27,12 @@
     select {
       letter-spacing: 0.05rem;
     }
+    input,
+    textarea,
+    label,
+    select {
+      width: 100%;
+    }
   }
 
   a {
