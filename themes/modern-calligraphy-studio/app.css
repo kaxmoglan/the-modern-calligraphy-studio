@@ -13101,6 +13101,8 @@ footer .end-credits a:hover {
 @media (max-width: 767.98px) {
   #woocommerce-page-template {
     padding-top: 2rem;
+    margin-left: 4%;
+    margin-right: 4%;
   }
 }
 
