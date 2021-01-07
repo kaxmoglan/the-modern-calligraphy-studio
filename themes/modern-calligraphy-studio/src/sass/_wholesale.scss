@@ -1,4 +1,8 @@
 #wholesale-page {
+  @include media-breakpoint-down(md) {
+    margin-top: 8rem;
+  }
+
   .login-msg__container {
     background-color: $black;
     margin-left: auto;

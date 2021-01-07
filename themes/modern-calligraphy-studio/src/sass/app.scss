@@ -134,3 +134,14 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
+
+// MAIL CHIMP RESPONSES
+.sign-up-form__email .mce_inline_error:nth-child(3) {
+  display: none !important;
+}
+
+#mce-responses {
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+}
