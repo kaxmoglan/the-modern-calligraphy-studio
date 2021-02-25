@@ -5,7 +5,11 @@ I designed the site in Adobe XD and, upon approval, built a Wordpress theme usin
 
 I also used some freely available plugins for additional features like minimum order quantities per user-role and wholesale pricing.
 
+## Footnote
+
+Since launching the app, The Modern Calligraphy Studio have changed their name to The Hampshire Calligraphy Studio.
+
 ## Links
 
 For further details, visit [Project Details](https://www.maxcoghlan.com/projects/the-modern-calligraphy-studio).
-and to see the site in action, visit [The Modern Calligraphy Studio](https://www.themoderncalligraphystudio.com).
+and to see the site in action, visit [The Hampshire Calligraphy Studio](https://www.thehampshirecalligraphystudio.com).
