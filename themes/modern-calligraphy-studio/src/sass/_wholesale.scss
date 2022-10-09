@@ -1,183 +1,184 @@
 #wholesale-page {
-  @include media-breakpoint-down(md) {
-    margin-top: 8rem;
-  }
+	@include media-breakpoint-down(md) {
+		margin-top: 8rem;
+	}
 
-  .login-msg__container {
-    background-color: $black;
-    margin-left: auto;
-    margin-right: auto;
-    .login-msg {
-      color: $white;
-      margin-bottom: 0;
-    }
-  }
-  #drop-email {
-    color: inherit;
-    transition: all 250ms ease;
+	#loginform-custom {
+		margin-top: 1rem;
 
-    &:hover {
-      color: lighten($black, 60%);
-    }
-  }
+		label {
+			display: block;
+		}
+		.input {
+			text-align: center;
+			letter-spacing: 0.05rem;
+		}
+		.login-submit {
+			margin-top: 2rem;
+		}
+		p {
+			margin: 1rem 0;
+		}
+		#wp-submit {
+			border: none;
+			background: none;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
 
-  .sign-up {
-    h2 {
-      line-height: 2rem;
-    }
-    #apply-now {
-      letter-spacing: 0.1rem;
-    }
+			background-color: $black;
+			color: $white;
+			border-radius: 0.25rem;
+			padding: 0.5rem 1rem;
+			transition: all 250ms ease;
 
-    &__border {
-      &-top,
-      &-right,
-      &-bottom,
-      &-left {
-        position: absolute;
-        border: none;
-        background-color: $black;
-      }
-      &-bottom,
-      &-top {
-        width: 72%;
-        height: 0.5px;
+			&:hover {
+				background-color: lighten($black, 30%);
+			}
+		}
+	}
 
-        @include media-breakpoint-down(lg) {
-          width: 62%;
-        }
-        @include media-breakpoint-down(md) {
-          width: 71%;
-        }
-        @include media-breakpoint-down(sm) {
-          width: 66%;
-        }
-      }
-      &-right,
-      &-left {
-        width: 0.5px;
-        height: 77%;
+	.logged-in-links {
+		a {
+			text-decoration: underline;
+		}
+	}
 
-        @include media-breakpoint-down(lg) {
-          height: 78%;
-        }
-        @include media-breakpoint-down(md) {
-          height: 70%;
-        }
-        @include media-breakpoint-down(sm) {
-          height: 75%;
-        }
-      }
+	.login-msg__container {
+		background-color: $black;
+		margin-left: auto;
+		margin-right: auto;
+		.login-msg {
+			color: $white;
+			margin-bottom: 0;
+		}
+	}
+	#drop-email {
+		color: inherit;
+		transition: all 250ms ease;
 
-      &-bottom,
-      &-right {
-        bottom: 1.5rem;
-        right: 1.75rem;
-      }
-      &-top,
-      &-left {
-        top: 1.5rem;
-        left: 1.75rem;
-      }
-    }
+		&:hover {
+			color: lighten($black, 60%);
+		}
+	}
 
-    .flourish {
-      position: absolute;
-      width: 85px;
+	.sign-up {
+		h2 {
+			line-height: 2rem;
+		}
+		#apply-now {
+			letter-spacing: 0.1rem;
+		}
 
-      @include media-breakpoint-down(sm) {
-        width: 75px;
-      }
+		&__border {
+			&-top,
+			&-right,
+			&-bottom,
+			&-left {
+				position: absolute;
+				border: none;
+				background-color: $black;
+			}
+			&-bottom,
+			&-top {
+				width: 72%;
+				height: 0.5px;
 
-      &:nth-of-type(1) {
-        transform: rotate(30deg);
-        top: 1.5rem;
-        right: 1rem;
-      }
-      &:nth-of-type(2) {
-        transform: rotate(30deg) scaleY(-1);
-        bottom: 0.5rem;
-        left: 1rem;
-      }
-    }
-  }
+				@include media-breakpoint-down(lg) {
+					width: 62%;
+				}
+				@include media-breakpoint-down(md) {
+					width: 71%;
+				}
+				@include media-breakpoint-down(sm) {
+					width: 66%;
+				}
+			}
+			&-right,
+			&-left {
+				width: 0.5px;
+				height: 85%;
 
-  .log-in {
-    min-height: 450px;
+				@include media-breakpoint-down(lg) {
+					height: 85%;
+				}
+				@include media-breakpoint-down(md) {
+					height: 70%;
+				}
+				@include media-breakpoint-down(sm) {
+					height: 75%;
+				}
+			}
 
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 90%;
-      height: 90%;
-      border: 1px solid black;
-      pointer-events: none;
-    }
+			&-bottom,
+			&-right {
+				bottom: 1.5rem;
+				right: 1.75rem;
+			}
+			&-top,
+			&-left {
+				top: 1.5rem;
+				left: 1.75rem;
+			}
+		}
 
-    &__content {
-      display: relative;
+		.flourish {
+			position: absolute;
+			width: 85px;
 
-      hr {
-        width: 80%;
-        margin: 1.5rem auto;
-      }
+			@include media-breakpoint-down(sm) {
+				width: 75px;
+			}
 
-      a {
-        color: $black;
-        text-decoration: none;
-        transition: all 250ms ease;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
+			&:nth-of-type(1) {
+				transform: rotate(30deg);
+				top: 1.5rem;
+				right: 1rem;
+			}
+			&:nth-of-type(2) {
+				transform: rotate(30deg) scaleY(-1);
+				bottom: 0.5rem;
+				left: 1rem;
+			}
+		}
+	}
 
-        &:hover {
-          color: lighten($black, 60%);
-        }
-      }
+	.log-in {
+		min-height: 450px;
 
-      p {
-        font-size: 1rem;
-        margin: 0 1rem;
-      }
-      .logged-in-links {
-        a {
-          text-decoration: underline;
-        }
-      }
-    }
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 90%;
+			height: 90%;
+			border: 1px solid black;
+			pointer-events: none;
+		}
 
-    #loginform-custom {
-      margin-top: 2rem;
+		&__content {
+			display: relative;
 
-      label {
-        display: block;
-      }
-      .input {
-        text-align: center;
-        letter-spacing: 0.05rem;
-      }
-      .login-submit {
-        margin-top: 2rem;
-      }
-      p {
-        margin: 1rem 0;
-      }
-      #wp-submit {
-        border: none;
-        background: none;
-        text-transform: uppercase;
-        letter-spacing: 0.1rem;
+			hr {
+				width: 80%;
+				margin: 1.5rem auto;
+			}
 
-        background-color: $black;
-        color: $white;
-        border-radius: 0.25rem;
-        padding: 0.5rem 1rem;
-        transition: all 250ms ease;
+			a {
+				color: $black;
+				text-decoration: none;
+				transition: all 250ms ease;
+				text-transform: uppercase;
+				letter-spacing: 0.1rem;
 
-        &:hover {
-          background-color: lighten($black, 30%);
-        }
-      }
-    }
-  }
+				&:hover {
+					color: lighten($black, 60%);
+				}
+			}
+
+			p {
+				font-size: 1rem;
+				margin: 0 1rem;
+			}
+		}
+	}
 }

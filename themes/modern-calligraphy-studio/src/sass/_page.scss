@@ -1,95 +1,95 @@
 #default-page-template {
-  @include media-breakpoint-down(md) {
-    margin-top: 8rem;
-  }
+	@include media-breakpoint-down(md) {
+		margin-top: 8rem;
+	}
 
-  .container {
-    padding: 0;
-  }
+	.container {
+		padding: 0;
+	}
 
-  p {
-    font-size: 16px;
-  }
+	p {
+		font-size: 16px;
+	}
 
-  .shipping {
-    max-width: 600px;
-  }
+	.shipping {
+		max-width: 600px;
+	}
 
-  #contact-send-btn {
-    &:hover {
-      background-color: lighten($black, 20%);
-    }
-  }
+	#contact-send-btn {
+		&:hover {
+			background-color: lighten($black, 20%);
+		}
+	}
 
-  form {
-    input,
-    textarea,
-    select {
-      letter-spacing: 0.05rem;
-    }
-    input,
-    textarea,
-    label,
-    select {
-      width: 100%;
-    }
-  }
+	form {
+		input,
+		textarea,
+		select {
+			letter-spacing: 0.05rem;
+		}
+		input,
+		textarea,
+		label,
+		select {
+			width: 100%;
+		}
+	}
 
-  a {
-    color: inherit;
-    transition: all 250ms ease;
+	a {
+		color: inherit;
+		transition: all 250ms ease;
 
-    &:hover {
-      color: lighten($black, 30%);
-    }
-  }
+		&:hover {
+			color: lighten($black, 30%);
+		}
+	}
 
-  .btn-dark {
-    color: $white;
-    text-decoration: none;
+	.btn-dark {
+		color: $white;
+		text-decoration: none;
 
-    &:hover {
-      color: $white;
-      text-decoration: none;
-      background-color: lighten($black, 30%);
-    }
-  }
+		&:hover {
+			color: $white;
+			text-decoration: none;
+			background-color: lighten($black, 30%);
+		}
+	}
 
-  .add-dark-square-img {
-    figure {
-      position: relative;
+	.add-dark-square-img {
+		figure {
+			position: relative;
 
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 93%;
-        height: 93%;
-        top: 3.5%;
-        left: 3.5%;
-        pointer-events: none;
-        border: 1px solid $dark_grey;
-      }
-    }
-  }
-  .btn-container {
-    a {
-      &:hover {
-        color: inherit;
-      }
-    }
-  }
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 93%;
+				height: 93%;
+				top: 3.5%;
+				left: 3.5%;
+				pointer-events: none;
+				border: 1px solid $dark_grey;
+			}
+		}
+	}
+	.btn-container {
+		a {
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
 
-  .spot-galligraphy-gallery {
-    figure {
-      overflow: hidden;
-    }
-    img {
-      transition: all 500ms ease;
+	.spot-galligraphy-gallery {
+		figure {
+			overflow: hidden;
+		}
+		img {
+			transition: all 500ms ease;
 
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
 }
